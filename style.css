@@ -1,6 +1,8 @@
 
 /* ========================================
-   基本設定
+   ELEMENTIS SUMMONER OFFICIAL
+   STYLE.CSS - PART 1
+   基本設定・ヘッダー・HOME
 ======================================== */
 
 :root {
@@ -56,7 +58,7 @@ button {
 }
 
 /* ========================================
-   ヘッダー
+   HEADER
 ======================================== */
 
 .site-header {
@@ -77,16 +79,6 @@ button {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-}
-
-.site-brand {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  color: var(--gold-light);
-  font-size: 17px;
-  font-weight: bold;
-  letter-spacing: 1.5px;
 }
 
 .brand-mark {
@@ -122,7 +114,7 @@ button {
 }
 
 /* ========================================
-   メインビジュアル
+   HOME - HERO
 ======================================== */
 
 .hero {
@@ -133,7 +125,6 @@ button {
   align-items: center;
   justify-content: center;
   text-align: center;
-
   background:
     linear-gradient(
       rgba(245, 231, 198, 0.8),
@@ -144,7 +135,6 @@ button {
       #fff9e9,
       #c5a573
     );
-
   border-bottom: 5px double var(--gold);
 }
 
@@ -186,7 +176,7 @@ button {
 }
 
 /* ========================================
-   共通セクション
+   HOME - SECTIONS
 ======================================== */
 
 .section {
@@ -221,6 +211,10 @@ button {
   font-size: 22px;
 }
 
+/* ========================================
+   PAPER PANEL
+======================================== */
+
 .paper-panel {
   max-width: 950px;
   margin: auto;
@@ -245,7 +239,7 @@ button {
 }
 
 /* ========================================
-   ボタン
+   BUTTONS
 ======================================== */
 
 .button {
@@ -286,7 +280,7 @@ button {
 }
 
 /* ========================================
-   カード紹介
+   HOME - FEATURE CARDS
 ======================================== */
 
 .card-grid {
@@ -330,7 +324,8 @@ button {
 }
 
 /* ========================================
-   プレイエリア
+   STYLE.CSS - PART 2
+   PLAY SECTION
 ======================================== */
 
 .section-play {
@@ -369,7 +364,7 @@ button {
 }
 
 /* ========================================
-   フッター
+   FOOTER
 ======================================== */
 
 .site-footer {
@@ -397,47 +392,12 @@ button {
 }
 
 /* ========================================
-   スマートフォン対応
+   HOME RESPONSIVE
 ======================================== */
 
 @media (max-width: 900px) {
-
-  .header-inner {
-    min-height: 65px;
-    padding: 0 16px;
-  }
-
-  .site-brand {
-    font-size: 13px;
-    letter-spacing: 0.5px;
-  }
-
-  .menu-toggle {
-    display: block;
-  }
-
-  .site-nav {
-    display: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    padding: 15px 20px;
-    background: var(--brown);
-    border-bottom: 2px solid var(--gold);
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0;
-  }
-
   .site-nav.open {
     display: flex;
-  }
-
-  .site-nav a {
-    padding: 12px;
-    border-bottom: 1px solid rgba(255,255,255,0.12);
-    font-size: 14px;
   }
 
   .hero {
@@ -470,15 +430,9 @@ button {
     grid-template-columns: 1fr;
     max-width: 450px;
   }
-
 }
 
 @media (max-width: 380px) {
-
-  .site-brand {
-    font-size: 11px;
-  }
-
   .hero-ornament {
     font-size: 12px;
     letter-spacing: 2px;
@@ -491,7 +445,6 @@ button {
   .paper-panel {
     padding: 30px 20px;
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -504,9 +457,8 @@ button {
   }
 }
 
-
 /* ========================================
-   公式ロゴ
+   HOME LOGO
 ======================================== */
 
 .hero-logo {
@@ -525,9 +477,8 @@ button {
   );
 }
 
-
 /* ========================================
-   メインカード表示
+   HOME CARD DISPLAY
 ======================================== */
 
 .hero-cards {
@@ -553,8 +504,6 @@ button {
   transition: transform 0.3s ease;
 }
 
-/* 左側のカード */
-
 .hero-card-left {
   z-index: 1;
   transform:
@@ -562,8 +511,6 @@ button {
     translateY(25px)
     rotate(-18deg);
 }
-
-/* 中央のカード */
 
 .hero-card-center {
   z-index: 3;
@@ -573,8 +520,6 @@ button {
     rotate(0deg);
 }
 
-/* 右側のカード */
-
 .hero-card-right {
   z-index: 2;
   transform:
@@ -583,13 +528,7 @@ button {
     rotate(18deg);
 }
 
-
-/* ========================================
-   スマートフォン対応
-======================================== */
-
 @media (max-width: 600px) {
-
   .hero-logo {
     width: 95%;
     margin-bottom: 15px;
@@ -626,7 +565,6 @@ button {
       translateY(20px)
       rotate(18deg);
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -636,7 +574,7 @@ button {
 }
 
 /* ========================================
-   Elementis Summoner タイトル
+   HOME TITLE
 ======================================== */
 
 .hero-title-area {
@@ -679,7 +617,6 @@ button {
 }
 
 @media (max-width: 600px) {
-
   .hero-main-title {
     font-size: clamp(30px, 9vw, 48px);
     letter-spacing: 2px;
@@ -694,11 +631,10 @@ button {
     font-size: 12px;
     letter-spacing: 2px;
   }
-
 }
 
 /* ========================================
-   カード紹介画像
+   HOME FEATURE CARD IMAGES
 ======================================== */
 
 .feature-card-image {
@@ -715,11 +651,9 @@ button {
   max-width: 100%;
   max-height: 290px;
   object-fit: contain;
-
   filter: drop-shadow(
     0 8px 8px rgba(50, 30, 10, 0.3)
   );
-
   transition: transform 0.25s ease;
 }
 
@@ -732,10 +666,7 @@ button {
   text-align: left;
 }
 
-/* スマートフォン */
-
 @media (max-width: 600px) {
-
   .feature-card-image {
     height: 270px;
   }
@@ -743,7 +674,6 @@ button {
   .feature-card-image img {
     max-height: 250px;
   }
-
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -756,10 +686,8 @@ button {
   }
 }
 
-
-
 /* ========================================
-   RULE PAGE
+   RULE PAGE - HERO
 ======================================== */
 
 .rule-hero {
@@ -784,6 +712,10 @@ button {
   color: #a47a35;
   letter-spacing: 4px;
 }
+
+/* ========================================
+   RULE PAGE - SECTIONS
+======================================== */
 
 .rule-section {
   padding: 55px 20px;
@@ -816,12 +748,16 @@ button {
   font-size: 32px;
 }
 
+/* ========================================
+   RULE PAGE - PAPER
+======================================== */
+
 .rule-paper {
   background: #fffaf0;
   border: 1px solid #a47a35;
   padding: 35px 40px;
   line-height: 2;
-  box-shadow: 0 5px 18px rgba(50,30,10,0.08);
+  box-shadow: 0 5px 18px rgba(50, 30, 10, 0.08);
 }
 
 .rule-paper h3 {
@@ -851,7 +787,9 @@ button {
   color: #776958;
 }
 
-/* 目次 */
+/* ========================================
+   RULE PAGE - CONTENTS
+======================================== */
 
 .rule-toc {
   background: #fffaf0;
@@ -866,17 +804,15 @@ button {
   letter-spacing: 3px;
 }
 
-.rule-toc a {
-  display: block;
-  padding: 8px 12px;
-  border-bottom: 1px solid #e4d2ad;
-}
-
 .rule-toc a:hover {
   background: #f3ead5;
 }
 
-/* カード */
+
+/* ========================================
+   STYLE.CSS - PART 3
+   RULE CARD DISPLAY
+======================================== */
 
 .rule-card-grid {
   display: grid;
@@ -915,7 +851,39 @@ button {
   font-size: 14px;
 }
 
-/* ゾーン */
+/* 旧公式サイトの説明画像 */
+
+.rule-card .rule-card-guide-image {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto 16px;
+  object-fit: contain;
+}
+
+/* カードの①～⑥の説明 */
+
+.rule-card-parts {
+  margin: 16px 0 0;
+  padding-left: 1.7em;
+  text-align: left;
+  line-height: 1.8;
+}
+
+.rule-card-parts li {
+  padding-left: 4px;
+  margin-bottom: 4px;
+}
+
+.rule-card-parts li::marker {
+  color: #8b6337;
+  font-weight: bold;
+}
+
+/* ========================================
+   RULE INFORMATION
+======================================== */
 
 .rule-info-grid {
   display: grid;
@@ -934,16 +902,15 @@ button {
   color: #63442b;
 }
 
-/* 最下部 */
-
 .rule-bottom {
   text-align: center;
 }
 
-/* スマートフォン */
+/* ========================================
+   RULE RESPONSIVE
+======================================== */
 
 @media (max-width: 700px) {
-
   .rule-section {
     padding: 40px 15px;
   }
@@ -967,14 +934,19 @@ button {
   }
 
   .rule-card img {
-    height: 250px;
+    height: auto;
+    max-height: 300px;
   }
 
+  .rule-card .rule-card-guide-image {
+    width: 100%;
+    height: auto;
+  }
 }
 
-
 /* ========================================
-   紙のカード用プレイフィールド
+   RULE FIELD GUIDE
+   カードの配置図
 ======================================== */
 
 .paper-field-guide {
@@ -1027,81 +999,10 @@ button {
   margin-bottom: 30px;
 }
 
-.paper-summon-card,
-.paper-cost-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 75px;
-  aspect-ratio: 0.72;
-  border-radius: 5px;
-  flex-shrink: 1;
-  min-width: 0;
-}
-
-.paper-summon-card {
-  background: #fff7e8;
-  border: 3px double #a47a35;
-  color: #63442b;
-  font-size: 10px;
-}
-
-.paper-cost-card {
-  background: #493022;
-  border: 3px double #c9a76a;
-  color: #d8b777;
-  font-size: 24px;
-}
-
-/* クールゾーン */
-
 .paper-cool-area {
   min-width: 0;
   border-left: 1px dashed #a47a35;
   padding-left: 15px;
-}
-
-.paper-cool-stack {
-  position: relative;
-  height: 235px;
-  width: 100%;
-}
-
-.paper-cool-card {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  width: min(100%, 95px);
-  aspect-ratio: 0.72;
-  transform: translateX(-50%);
-  background: #fff7e8;
-  border: 2px solid #a47a35;
-  border-radius: 5px;
-  box-shadow: 0 3px 5px rgba(50,30,10,.18);
-}
-
-.paper-cool-card:nth-child(1) {
-  top: 0;
-  z-index: 1;
-}
-
-.paper-cool-card:nth-child(2) {
-  top: 36px;
-  z-index: 2;
-}
-
-.paper-cool-card:nth-child(3) {
-  top: 72px;
-  z-index: 3;
-}
-
-.paper-cool-card span {
-  display: block;
-  padding: 6px 4px;
-  color: #38251a;
-  font-size: 10px;
-  text-align: center;
-  background: #e4d2ad;
 }
 
 .paper-cool-caption {
@@ -1117,59 +1018,56 @@ button {
   color: #63442b;
 }
 
-/* スマートフォン */
+/* ========================================
+   FIELD GUIDE - REAL CARD IMAGES
+======================================== */
 
-@media (max-width: 600px) {
+.paper-real-card {
+  display: block;
+  width: 75px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 0.72;
+  object-fit: contain;
+  flex-shrink: 1;
+  filter: drop-shadow(
+    0 3px 4px rgba(40, 25, 10, 0.25)
+  );
+}
 
-  .paper-field-guide {
-    padding: 12px;
-  }
+/* クールゾーンの重なったカード */
 
-  .paper-field {
-    grid-template-columns: minmax(0, 1fr) 85px;
-    gap: 8px;
-    padding: 15px 6px;
-  }
+.paper-cool-stack {
+  position: relative;
+  height: 185px;
+  width: 100%;
+}
 
-  .paper-summons,
-  .paper-costs {
-    gap: 4px;
-  }
+.paper-cool-real-card {
+  position: absolute;
+  left: 50%;
+  width: min(100%, 95px);
+  height: auto;
+  aspect-ratio: 0.72;
+  object-fit: contain;
+  transform: translateX(-50%);
+  filter: drop-shadow(
+    0 3px 4px rgba(40, 25, 10, 0.25)
+  );
+}
 
-  .paper-summon-card,
-  .paper-cost-card {
-    width: 100%;
-    font-size: 7px;
-  }
+.paper-cool-real-card:nth-child(1) {
+  top: 0;
+  z-index: 1;
+}
 
-  .paper-cool-area {
-    padding-left: 6px;
-  }
-
-  .paper-cool-card span {
-    font-size: 7px;
-    padding: 4px 2px;
-  }
-
-  .paper-cool-stack {
-    height: 175px;
-  }
-
-  .paper-cool-card:nth-child(2) {
-    top: 26px;
-  }
-
-  .paper-cool-card:nth-child(3) {
-    top: 52px;
-  }
-
-  .paper-zone-title {
-    font-size: 10px;
-  }
+.paper-cool-real-card:nth-child(2) {
+  top: 36px;
+  z-index: 2;
 }
 
 /* ========================================
-   手札の配置
+   HAND AREA
 ======================================== */
 
 .paper-hand-area {
@@ -1186,102 +1084,33 @@ button {
   gap: 10px;
 }
 
-.paper-hand-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 75px;
-  aspect-ratio: 0.72;
-  border-radius: 5px;
-  border: 3px double #a47a35;
-  background: #fff7e8;
-  color: #63442b;
-  font-size: 10px;
-}
-
-/* クールゾーン：2枚用 */
-
-.paper-cool-stack {
-  height: 185px;
-}
-
-.paper-cool-card:nth-child(2) {
-  top: 36px;
-}
-
-/* スマートフォン */
-
-@media (max-width: 600px) {
-
-  .paper-hand-card {
-    width: 55px;
-    font-size: 9px;
-  }
-
-  .paper-cool-stack {
-    height: 145px;
-  }
-
-  .paper-cool-card:nth-child(2) {
-    top: 26px;
-  }
-
-}
-
-
 /* ========================================
-   実際のカード画像
+   FIELD GUIDE - MOBILE
 ======================================== */
 
-.paper-real-card {
-  display: block;
-  width: 75px;
-  max-width: 100%;
-  height: auto;
-  aspect-ratio: 0.72;
-  object-fit: contain;
-  flex-shrink: 1;
-
-  filter: drop-shadow(
-    0 3px 4px rgba(40,25,10,0.25)
-  );
-}
-
-/* クールゾーン */
-
-.paper-cool-stack {
-  position: relative;
-  height: 185px;
-}
-
-.paper-cool-real-card {
-  position: absolute;
-  left: 50%;
-  width: min(100%, 95px);
-  height: auto;
-  aspect-ratio: 0.72;
-  object-fit: contain;
-
-  transform: translateX(-50%);
-
-  filter: drop-shadow(
-    0 3px 4px rgba(40,25,10,0.25)
-  );
-}
-
-.paper-cool-real-card:nth-child(1) {
-  top: 0;
-  z-index: 1;
-}
-
-.paper-cool-real-card:nth-child(2) {
-  top: 36px;
-  z-index: 2;
-}
-
-/* スマートフォン */
-
 @media (max-width: 600px) {
+  .paper-field-guide {
+    padding: 12px;
+  }
+
+  .paper-field {
+    grid-template-columns: minmax(0, 1fr) 85px;
+    gap: 8px;
+    padding: 15px 6px;
+  }
+
+  .paper-summons,
+  .paper-costs {
+    gap: 4px;
+  }
+
+  .paper-cool-area {
+    padding-left: 6px;
+  }
+
+  .paper-zone-title {
+    font-size: 10px;
+  }
 
   .paper-real-card {
     width: 55px;
@@ -1298,110 +1127,217 @@ button {
   .paper-cool-real-card:nth-child(2) {
     top: 26px;
   }
+}
 
+/* ========================================
+   RULE DIAGRAMS
+   アタック・ブロック・バトルの図解
+======================================== */
+
+.rule-diagram {
+  margin: 28px auto 36px;
+  padding: 16px;
+  max-width: 780px;
+  text-align: center;
+  border: 1px solid rgba(115, 83, 45, 0.35);
+  border-radius: 10px;
+  background: rgba(255, 248, 229, 0.45);
+}
+
+.rule-diagram img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 5px;
+}
+
+.rule-diagram figcaption {
+  margin-top: 12px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: #6b482a;
+}
+
+/* ========================================
+   RULE OFFICIAL TEXT
+======================================== */
+
+.rule-official-content {
+  line-height: 1.95;
+  overflow-wrap: anywhere;
+}
+
+.rule-official-content h3 {
+  margin-top: 32px;
+  margin-bottom: 12px;
+}
+
+.rule-official-content h4 {
+  margin-top: 22px;
+  margin-bottom: 10px;
+}
+
+.rule-official-content p {
+  margin-bottom: 16px;
+}
+
+.rule-official-content ul,
+.rule-official-content ol {
+  padding-left: 1.6em;
+  margin: 14px 0 22px;
+}
+
+.rule-official-content li {
+  margin-bottom: 10px;
+}
+
+.rule-official-content hr {
+  border: 0;
+  border-top: 1px solid rgba(115, 83, 45, 0.35);
+  margin: 36px 0;
+}
+
+.rule-official-content a {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.rule-section,
+#rule-field {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 600px) {
+  .rule-diagram {
+    padding: 8px;
+    margin: 20px auto 28px;
+  }
+
+  .rule-diagram figcaption {
+    font-size: 0.82rem;
+  }
+
+  .rule-official-content {
+    line-height: 1.85;
+  }
+
+  .rule-official-content h3 {
+    margin-top: 26px;
+  }
+
+  .rule-official-content ul,
+  .rule-official-content ol {
+    padding-left: 1.3em;
+  }
 }
 
 
 /* ========================================
-   CARD LIST
+   STYLE.CSS - PART 4
+   CARD LIST PAGE
+======================================== */
+
+/* ========================================
+   CARD SEARCH PANEL
 ======================================== */
 
 .card-search-panel {
   display: grid;
-  grid-template-columns: 2fr repeat(3, 1fr) auto;
+  grid-template-columns:
+    2fr repeat(4, minmax(0, 1fr)) auto;
   gap: 12px;
+  width: 100%;
+  min-width: 0;
   margin-bottom: 25px;
   padding: 20px;
-  background: #fffaf0;
-  border: 1px solid #a47a35;
+  background: var(--paper-light);
+  border: 1px solid var(--gold);
 }
+
+/* 検索入力・絞り込み選択・ボタン */
 
 .card-search-panel input,
 .card-search-panel select,
 .card-search-panel button {
   min-width: 0;
+  max-width: 100%;
+  min-height: 44px;
   padding: 12px;
-  border: 1px solid #a47a35;
+  border: 1px solid var(--gold);
   border-radius: 4px;
   font: inherit;
 }
 
 .card-search-panel button {
-  background: #63442b;
-  color: #fffaf0;
+  background: var(--brown-light);
+  color: var(--paper-light);
   cursor: pointer;
+  transition: background 0.2s ease;
 }
+
+.card-search-panel button:hover {
+  background: var(--brown);
+}
+
+/* ========================================
+   CARD RESULT COUNT
+======================================== */
 
 .card-result-count {
   margin-bottom: 20px;
-  color: #63442b;
+  color: var(--brown-light);
   text-align: right;
 }
 
+/* ========================================
+   OFFICIAL CARD GRID
+======================================== */
+
 .official-card-grid {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns:
+    repeat(5, minmax(0, 1fr));
   gap: 20px;
+  width: 100%;
+  min-width: 0;
 }
+
+/* ========================================
+   OFFICIAL CARD ITEM
+======================================== */
 
 .official-card-item {
   min-width: 0;
+  overflow: hidden;
   padding: 12px;
-  background: #fffaf0;
-  border: 1px solid #a47a35;
+  background: var(--paper-light);
+  border: 1px solid var(--gold);
   text-align: center;
 }
+
+/* カード画像 */
 
 .official-card-item img {
   display: block;
   width: 100%;
+  max-width: 100%;
   height: auto;
   aspect-ratio: 0.72;
   object-fit: contain;
 }
 
+/* カード名 */
+
 .official-card-item p {
   margin: 10px 0 0;
-  color: #38251a;
+  color: var(--brown);
   font-size: 13px;
+  overflow-wrap: anywhere;
 }
 
-@media (max-width: 900px) {
-
-  .card-search-panel {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-
-  .official-card-grid {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-}
-
-@media (max-width: 600px) {
-
-  .card-search-panel {
-    grid-template-columns: 1fr;
-  }
-
-  .official-card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 10px;
-  }
-
-  .official-card-item {
-    padding: 7px;
-  }
-}
-
-
-/* カード検索欄 */
-
-.card-search-panel {
-  grid-template-columns:
-    2fr repeat(4, minmax(0, 1fr)) auto;
-}
-
-/* カード情報 */
+/* カードの詳細情報 */
 
 .official-card-info {
   margin-top: 5px !important;
@@ -1409,57 +1345,166 @@ button {
   color: #8c6329 !important;
 }
 
-/* タブレット */
+/* ========================================
+   CARD LIST - TABLET
+======================================== */
 
 @media (max-width: 900px) {
+
+  /* 検索フォームを2列に変更 */
+
   .card-search-panel {
     grid-template-columns:
       repeat(2, minmax(0, 1fr));
   }
+
+  /* カード一覧を3列に変更 */
+
+  .official-card-grid {
+    grid-template-columns:
+      repeat(3, minmax(0, 1fr));
+  }
+
 }
 
-/* スマートフォン */
+/* ========================================
+   CARD LIST - SMARTPHONE
+======================================== */
 
 @media (max-width: 600px) {
+
+  /* 検索フォームを1列に変更 */
+
   .card-search-panel {
     grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 14px;
   }
+
+  .card-search-panel input,
+  .card-search-panel select {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  .card-search-panel button {
+    width: 100%;
+    font-size: 15px;
+  }
+
+  /* カード一覧を2列に変更 */
+
+  .official-card-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .official-card-item {
+    padding: 6px;
+  }
+
+  .official-card-item p {
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  .official-card-info {
+    font-size: 10px !important;
+  }
+
+}
+
+/* ========================================
+   CARD LIST - SMALL SMARTPHONE
+======================================== */
+
+@media (max-width: 380px) {
+
+  .official-card-grid {
+    gap: 8px;
+  }
+
+  .official-card-item {
+    padding: 5px;
+  }
+
+  .official-card-item p {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
 }
 
 
 /* ========================================
-   EVENT PAGE
+   STYLE.CSS - PART 5
+   EVENT / SHOP / PLAY
 ======================================== */
 
-.event-container {
+/* ========================================
+   COMMON PAGE LAYOUT
+======================================== */
+
+.event-container,
+.shop-container,
+.play-container {
   width: min(100% - 40px, 1000px);
   margin: 0 auto;
   padding: 65px 0 100px;
 }
 
-.event-section {
-  margin-bottom: 75px;
-  text-align: center;
+.event-section,
+.shop-section,
+.play-section {
+  margin-bottom: 80px;
 }
 
-.event-section h2 {
+.event-section {
+  text-align: center;
+  margin-bottom: 75px;
+}
+
+.event-section h2,
+.shop-section > h2,
+.play-section > h2 {
   margin: 0;
   color: #4b3020;
   font-size: 28px;
   letter-spacing: 0.08em;
 }
 
-.event-section-en {
-  margin: 10px 0 30px;
+.shop-section > h2,
+.play-section > h2 {
+  text-align: center;
+}
+
+.event-section-en,
+.shop-section-en,
+.play-section-en {
   color: #9a753d;
   font-size: 12px;
   letter-spacing: 0.2em;
 }
 
+.event-section-en {
+  margin: 10px 0 30px;
+}
+
+.shop-section-en,
+.play-section-en {
+  margin: 10px 0 35px;
+  text-align: center;
+}
+
+/* ========================================
+   EVENT PAGE
+======================================== */
+
 .event-empty {
   padding: 55px 25px;
   border: 1px solid #b59a69;
-  background: #fffaf0;
+  background: var(--paper-light);
   box-shadow: 0 4px 15px rgba(50, 30, 10, 0.06);
   color: #654d37;
   line-height: 2;
@@ -1477,61 +1522,9 @@ button {
   color: #4b3020;
 }
 
-@media (max-width: 600px) {
-
-  .event-container {
-    width: calc(100% - 28px);
-    padding: 40px 0 65px;
-  }
-
-  .event-section {
-    margin-bottom: 50px;
-  }
-
-  .event-section h2 {
-    font-size: 22px;
-  }
-
-  .event-empty {
-    padding: 35px 15px;
-  }
-
-  .event-empty-title {
-    font-size: 15px;
-  }
-}
-
-
 /* ========================================
    SHOP PAGE
 ======================================== */
-
-.shop-container {
-  width: min(100% - 40px, 1000px);
-  margin: 0 auto;
-  padding: 65px 0 100px;
-}
-
-.shop-section {
-  margin-bottom: 80px;
-}
-
-.shop-section > h2 {
-  margin: 0;
-  color: #4b3020;
-  font-size: 28px;
-  letter-spacing: 0.08em;
-  text-align: center;
-}
-
-.shop-section-en {
-  margin: 10px 0 35px;
-  color: #9a753d;
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  text-align: center;
-}
-
 
 /* 商品カード */
 
@@ -1540,10 +1533,12 @@ button {
   grid-template-columns: 300px minmax(0, 1fr);
   gap: 35px;
   padding: 30px;
-  background: #fffaf0;
+  background: var(--paper-light);
   border: 1px solid #b59a69;
   box-shadow: 0 4px 15px rgba(50, 30, 10, 0.06);
 }
+
+/* 商品画像エリア */
 
 .shop-product-image {
   min-height: 300px;
@@ -1564,6 +1559,8 @@ button {
   font-size: 11px;
   letter-spacing: 0.15em;
 }
+
+/* 商品情報 */
 
 .shop-product-info {
   padding: 15px 0;
@@ -1596,12 +1593,11 @@ button {
   line-height: 2;
 }
 
-
 /* 購入案内 */
 
 .shop-information {
   padding: 55px 25px;
-  background: #fffaf0;
+  background: var(--paper-light);
   border: 1px solid #b59a69;
   text-align: center;
   color: #654d37;
@@ -1619,81 +1615,15 @@ button {
   font-size: 20px;
 }
 
-
-/* スマートフォン */
-
-@media (max-width: 700px) {
-
-  .shop-container {
-    width: calc(100% - 28px);
-    padding: 40px 0 65px;
-  }
-
-  .shop-section {
-    margin-bottom: 55px;
-  }
-
-  .shop-section > h2 {
-    font-size: 22px;
-  }
-
-  .shop-product {
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 18px;
-  }
-
-  .shop-product-image {
-    min-height: 230px;
-  }
-
-  .shop-product-info h3 {
-    font-size: 22px;
-  }
-
-  .shop-information {
-    padding: 35px 15px;
-  }
-
-}
-
-
 /* ========================================
    PLAY PAGE
 ======================================== */
-
-.play-container {
-  width: min(100% - 40px, 1000px);
-  margin: 0 auto;
-  padding: 65px 0 100px;
-}
-
-.play-section {
-  margin-bottom: 80px;
-}
-
-.play-section > h2 {
-  margin: 0;
-  color: #4b3020;
-  font-size: 28px;
-  letter-spacing: 0.08em;
-  text-align: center;
-}
-
-.play-section-en {
-  margin: 10px 0 35px;
-  color: #9a753d;
-  font-size: 12px;
-  letter-spacing: 0.2em;
-  text-align: center;
-}
-
 
 /* WEB版紹介 */
 
 .play-web-panel {
   padding: 55px 30px;
-  background: #fffaf0;
+  background: var(--paper-light);
   border: 1px solid #b59a69;
   box-shadow: 0 4px 15px rgba(50, 30, 10, 0.06);
   text-align: center;
@@ -1719,12 +1649,14 @@ button {
   line-height: 2;
 }
 
+/* WEB版へのリンク */
+
 .play-web-button {
   display: inline-block;
   padding: 16px 45px;
   background: #4b3020;
   border: 1px solid #9a753d;
-  color: #fffaf0;
+  color: var(--paper-light);
   text-decoration: none;
   font-size: 15px;
   letter-spacing: 0.08em;
@@ -1746,8 +1678,9 @@ button {
   color: #92784e;
 }
 
-
-/* 関連ページ */
+/* ========================================
+   PLAY PAGE - RELATED LINKS
+======================================== */
 
 .play-guide-grid {
   display: grid;
@@ -1758,12 +1691,14 @@ button {
 .play-guide-card {
   display: block;
   padding: 35px 25px;
-  background: #fffaf0;
+  background: var(--paper-light);
   border: 1px solid #b59a69;
   color: #654d37;
   text-decoration: none;
   text-align: center;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
 .play-guide-card:hover {
@@ -1794,23 +1729,67 @@ button {
   color: #9a753d;
 }
 
-
-/* スマートフォン */
+/* ========================================
+   EVENT / SHOP / PLAY
+   SMARTPHONE
+======================================== */
 
 @media (max-width: 700px) {
 
+  .event-container,
+  .shop-container,
   .play-container {
     width: calc(100% - 28px);
     padding: 40px 0 65px;
   }
 
+  .event-section,
+  .shop-section,
   .play-section {
     margin-bottom: 55px;
   }
 
+  .event-section {
+    margin-bottom: 50px;
+  }
+
+  .event-section h2,
+  .shop-section > h2,
   .play-section > h2 {
     font-size: 22px;
   }
+
+  /* EVENT */
+
+  .event-empty {
+    padding: 35px 15px;
+  }
+
+  .event-empty-title {
+    font-size: 15px;
+  }
+
+  /* SHOP */
+
+  .shop-product {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 18px;
+  }
+
+  .shop-product-image {
+    min-height: 230px;
+  }
+
+  .shop-product-info h3 {
+    font-size: 22px;
+  }
+
+  .shop-information {
+    padding: 35px 15px;
+  }
+
+  /* PLAY */
 
   .play-web-panel {
     padding: 35px 18px;
@@ -1838,246 +1817,210 @@ button {
 
 
 /* ========================================
-   STEP 14-2
-   スマートフォン表示の最終調整
+   STYLE.CSS - PART 6
+   HEADER / MOBILE / FINAL ADJUSTMENTS
 ======================================== */
 
-/* 画面幅を超える画像を防止 */
+/* ========================================
+   COMMON IMAGE SETTINGS
+======================================== */
 
 img {
-    max-width: 100%;
+  max-width: 100%;
 }
 
-/* ヘッダー内の要素のはみ出し防止 */
+/* ========================================
+   SITE BRAND
+======================================== */
 
 .site-brand {
-    min-width: 0;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold-light);
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+  min-width: 0;
 }
 
 .site-brand span:last-child {
-    overflow-wrap: anywhere;
+  overflow-wrap: anywhere;
 }
 
-/* スマートフォン・タブレット */
+/* ========================================
+   HEADER - TABLET / SMARTPHONE
+======================================== */
 
 @media (max-width: 900px) {
 
-    .header-inner {
-        gap: 10px;
-    }
+  .header-inner {
+    min-height: 65px;
+    padding: 0 16px;
+    gap: 10px;
+  }
 
-    .site-brand {
-        flex: 1;
-        min-width: 0;
-        line-height: 1.4;
-    }
+  .site-brand {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    flex: 1;
+    min-width: 0;
+    line-height: 1.4;
+  }
 
-    .menu-toggle {
-        flex-shrink: 0;
-        min-width: 45px;
-        min-height: 44px;
-    }
+  /* メニューボタンを表示 */
 
-    /* 開いたメニューを画面内に収める */
+  .menu-toggle {
+    display: block;
+    flex-shrink: 0;
+    min-width: 45px;
+    min-height: 44px;
+  }
 
-    .site-nav {
-        max-height: calc(100vh - 65px);
-        max-height: calc(100dvh - 65px);
-        overflow-y: auto;
-        overscroll-behavior: contain;
-    }
+  /* 通常時はナビゲーションを非表示 */
 
-    /* メニュー項目を押しやすくする */
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 15px 20px;
+    background: var(--brown);
+    border-bottom: 2px solid var(--gold);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    max-height: calc(100dvh - 65px);
+    overflow-y: auto;
+    overscroll-behavior: contain;
+  }
 
-    .site-nav a {
-        display: flex;
-        align-items: center;
-        min-height: 44px;
-        padding: 10px 15px;
-    }
+  /* メニューを開いたとき */
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  /* メニュー項目 */
+
+  .site-nav a {
+    display: flex;
+    align-items: center;
+    min-height: 44px;
+    padding: 10px 15px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+    font-size: 14px;
+  }
 
 }
 
-/* 小さいスマートフォン */
+/* ========================================
+   SMALL SMARTPHONE
+======================================== */
 
 @media (max-width: 380px) {
 
-    .header-inner {
-        padding: 0 10px;
-    }
+  .header-inner {
+    padding: 0 10px;
+  }
 
-    .site-brand {
-        font-size: 11px;
-        letter-spacing: 0;
-    }
+  .site-brand {
+    font-size: 11px;
+    letter-spacing: 0;
+  }
 
-    .hero-description {
-        font-size: 13px;
-    }
-
-    .official-card-grid {
-        gap: 8px;
-    }
-
-    .official-card-item {
-        padding: 5px;
-    }
-
-    .official-card-item p {
-        font-size: 12px;
-        overflow-wrap: anywhere;
-    }
+  .hero-description {
+    font-size: 13px;
+  }
 
 }
 
-/* キーボード操作時の視認性 */
+/* ========================================
+   KEYBOARD ACCESSIBILITY
+======================================== */
 
 .site-nav a:focus-visible,
 .menu-toggle:focus-visible,
 .button:focus-visible {
-    outline: 2px solid var(--gold-light);
-    outline-offset: 3px;
+  outline: 2px solid var(--gold-light);
+  outline-offset: 3px;
 }
-
 
 /* ========================================
-   STEP 14-3
-   CARD LIST / RULE スマホ調整
+   RULE PAGE - SMALL SCREEN ADJUSTMENTS
 ======================================== */
-
-/* ----------------------------------------
-   CARD LIST
----------------------------------------- */
-
-.official-card-grid {
-    width: 100%;
-    min-width: 0;
-}
-
-.official-card-item {
-    min-width: 0;
-    overflow: hidden;
-}
-
-.official-card-item img {
-    max-width: 100%;
-    height: auto;
-}
-
-.official-card-item p {
-    overflow-wrap: anywhere;
-}
-
-/* 検索欄 */
-
-.card-search-panel {
-    width: 100%;
-    min-width: 0;
-}
-
-.card-search-panel input,
-.card-search-panel select,
-.card-search-panel button {
-    max-width: 100%;
-    min-height: 44px;
-}
-
-/* ----------------------------------------
-   RULE
----------------------------------------- */
-
-.rule-paper,
-.rule-toc,
-.rule-card,
-.rule-info {
-    min-width: 0;
-}
-
-.rule-paper img,
-.rule-card img {
-    max-width: 100%;
-}
-
-/* ----------------------------------------
-   スマートフォン
----------------------------------------- */
 
 @media (max-width: 600px) {
 
-    /* CARD LIST */
+  .rule-paper {
+    padding: 24px 16px;
+    overflow-wrap: anywhere;
+  }
 
-    .official-card-grid {
-        grid-template-columns:
-            repeat(2, minmax(0, 1fr));
+  .rule-heading {
+    gap: 8px;
+    font-size: 22px;
+  }
 
-        gap: 10px;
-    }
+  .rule-heading span {
+    font-size: 25px;
+  }
 
-    .official-card-item {
-        padding: 6px;
-    }
+  .rule-paper h3 {
+    font-size: 18px;
+  }
 
-    .official-card-item p {
-        font-size: 12px;
-        line-height: 1.5;
-    }
+  .rule-paper p,
+  .rule-paper li {
+    line-height: 1.9;
+  }
 
-    .official-card-info {
-        font-size: 10px !important;
-    }
+  .rule-toc {
+    padding: 18px 14px;
+  }
 
-    .card-search-panel {
-        grid-template-columns: 1fr;
-        gap: 10px;
-        padding: 14px;
-    }
+  .rule-card {
+    padding: 18px 14px;
+  }
 
-    .card-search-panel input,
-    .card-search-panel select {
-        width: 100%;
-        font-size: 16px;
-    }
+  .rule-info {
+    padding: 20px 16px;
+  }
 
-    .card-search-panel button {
-        width: 100%;
-        font-size: 15px;
-    }
+}
 
-    /* RULE */
+/* ========================================
+   RULE CONTENT - ADDITIONAL SETTINGS
+======================================== */
 
-    .rule-paper {
-        padding: 24px 16px;
-        overflow-wrap: anywhere;
-    }
+.rule-official-content .rule-card-grid {
+  margin: 28px 0;
+}
 
-    .rule-heading {
-        gap: 8px;
-        font-size: 22px;
-    }
+.rule-official-content .rule-card {
+  line-height: 1.65;
+}
 
-    .rule-heading span {
-        font-size: 25px;
-    }
+/* 目次リンクのクリック範囲 */
 
-    .rule-paper h3 {
-        font-size: 18px;
-    }
+.rule-toc a {
+  display: block;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e4d2ad;
+  scroll-margin-top: 90px;
+}
 
-    .rule-paper p,
-    .rule-paper li {
-        line-height: 1.9;
-    }
+/* ========================================
+   CARD GUIDE IMAGES
+   画像に説明番号・枠を直接描画済み
+======================================== */
 
-    .rule-toc {
-        padding: 18px 14px;
-    }
-
-    .rule-card {
-        padding: 18px 14px;
-    }
-
-    .rule-info {
-        padding: 20px 16px;
-    }
-
+.rule-card-guide-image {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  height: auto;
+  margin: 0 auto 16px;
+  object-fit: contain;
 }

@@ -3,11 +3,8 @@
 <html lang="ja">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-
-  <title>遊び方 | Elementis Summoner</title>
-
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>公式ルール | Elementis Summoner</title>
   <link rel="stylesheet" href="./style.css">
   <script src="./script.js" defer></script>
 </head>
@@ -16,7 +13,6 @@
 
 <header class="site-header">
   <div class="header-inner">
-
     <a class="site-brand" href="./index.html">
       <span class="brand-mark">✦</span>
       <span>ELEMENTIS SUMMONER</span>
@@ -31,29 +27,24 @@
       ☰
     </button>
 
-
-<nav id="site-nav" class="site-nav" aria-label="メインメニュー">
-
-  <a href="./index.html#home">HOME</a>
-  <a href="./index.html#about">ABOUT</a>
-  <a href="./rules.html">RULE</a>
-  <a href="./cards.html">CARD LIST</a>
-  <a href="./event.html">EVENT</a>
-  <a href="./shop.html">SHOP</a>
-  <a href="./play.html">PLAY</a>
-
-</nav>
-
-
+    <nav id="site-nav" class="site-nav" aria-label="メインメニュー">
+      <a href="./index.html#home">HOME</a>
+      <a href="./index.html#about">ABOUT</a>
+      <a href="./rules.html">RULE</a>
+      <a href="./cards.html">CARD LIST</a>
+      <a href="./event.html">EVENT</a>
+      <a href="./shop.html">SHOP</a>
+      <a href="./play.html">PLAY</a>
+    </nav>
   </div>
 </header>
 
 <main>
 
-  <!-- ページタイトル -->
+  <!-- タイトル -->
   <section class="rule-hero">
     <span class="section-en">OFFICIAL GAME GUIDE</span>
-    <h1>遊び方</h1>
+    <h1>公式ルール</h1>
     <p>HOW TO PLAY</p>
     <div class="heading-line">✦</div>
   </section>
@@ -63,48 +54,177 @@
     <div class="rule-container">
       <nav class="rule-toc" aria-label="ルール目次">
         <h2>CONTENTS</h2>
-        <a href="#rule-01">01. ゲームの目的</a>
+        <a href="#rule-01">01. 場所の名前</a>
         <a href="#rule-02">02. カードの種類</a>
-        <a href="#rule-03">03. ゲームの準備</a>
-        <a href="#rule-04">04. ゾーンの説明</a>
-        <a href="#rule-05">05. ターンの進行</a>
-        <a href="#rule-06">06. サモンと戦闘</a>
-        <a href="#rule-07">07. マギアとレジスト</a>
-        <a href="#rule-08">08. コストとクール</a>
+        <a href="#rule-03">03. カードのプレイ</a>
+        <a href="#rule-04">04. アタックとブロック</a>
+        <a href="#rule-05">05. その他の基本ルール</a>
+        <a href="#rule-06">06. 対戦準備</a>
+        <a href="#rule-07">07. 対戦手順</a>
+        <a href="#rule-08">08. 勝利条件</a>
+        <a href="#rule-09">09. ゲーム形式</a>
       </nav>
     </div>
   </section>
 
-  <!-- 01 -->
+  <!-- 01 場所の名前 -->
   <section id="rule-01" class="rule-section">
     <div class="rule-container">
 
       <h2 class="rule-heading">
-        <span>01</span> ゲームの目的
+        <span>01</span> 場所の名前
       </h2>
 
-      <div class="rule-paper">
+      <div class="rule-paper rule-official-content">
+        <h3>場（FIELD）</h3>
         <p>
-          Elementis Summonerは、
-          10枚のカードを使って対戦する
-          戦略型カードゲームです。
+          プレイしたサモンを置くところです。
+        </p>
+        <p class="rule-note">
+          ※「プレイ」とは、カードを手札から使用することです。
         </p>
 
+        <h3>コストゾーン（COST）</h3>
         <p>
-          相手プレイヤーのライフを0にすると、
-          そのゲームに勝利します。
+          カードをプレイするためのコストとして、
+          手札のカードを裏向きに伏せて置くところです。
         </p>
 
-        <p class="rule-emphasis">
-          先に2ゲーム勝利したプレイヤーが
-          マッチの勝者となります。
+        <h3>クールゾーン（COOL）</h3>
+        <p>
+          倒されたサモンと、プレイしたマギアや
+          レジストを置くところです。
+        </p>
+
+        <h3>手札（HAND）</h3>
+        <p>
+          プレイ前のカードです。
+          相手から見えないように手に持ちます。
         </p>
       </div>
 
+      <!-- 既存のカード配置図 -->
+      <div class="paper-field-guide" id="rule-field">
+        <h3>カードの配置</h3>
+        <p>
+          対戦では、自分の前にカードを配置します。
+          コストゾーンはカードを裏向きに並べ、
+          クールゾーンは表向きに重ねて置きます。
+        </p>
+
+        <div class="paper-field">
+          <div class="paper-field-main">
+
+            <div class="paper-zone-title">
+              FIELD / 場（2枚）
+            </div>
+
+            <div class="paper-summons">
+              <img
+                src="./images/card-summon.jpg"
+                alt="場のサモンカード1"
+                class="paper-real-card">
+
+              <img
+                src="./images/field-summon-2.jpg"
+                alt="場のサモンカード2"
+                class="paper-real-card">
+            </div>
+
+            <div class="paper-zone-title">
+              COST / コストゾーン（3枚）
+            </div>
+
+            <div class="paper-costs">
+              <img
+                src="./images/card-back.jpg"
+                alt="裏向きのコストカード1"
+                class="paper-real-card">
+
+              <img
+                src="./images/card-back.jpg"
+                alt="裏向きのコストカード2"
+                class="paper-real-card">
+
+              <img
+                src="./images/card-back.jpg"
+                alt="裏向きのコストカード3"
+                class="paper-real-card">
+            </div>
+          </div>
+
+          <div class="paper-cool-area">
+            <div class="paper-zone-title">
+              COOL（2枚）
+            </div>
+
+            <div class="paper-cool-stack">
+              <img
+                src="./images/cool-card-1.jpg"
+                alt="クールゾーンのカード1"
+                class="paper-cool-real-card">
+
+              <img
+                src="./images/cool-card-2.jpg"
+                alt="クールゾーンのカード2"
+                class="paper-cool-real-card">
+            </div>
+
+            <p class="paper-cool-caption">
+              表向きにして、カード名が見えるように重ねる
+            </p>
+          </div>
+        </div>
+
+        <div class="paper-hand-area">
+          <div class="paper-zone-title">
+            HAND / 手札（3枚）
+          </div>
+
+          <div class="paper-hand-cards">
+            <img
+              src="./images/card-magia.jpg"
+              alt="手札のマギアカード"
+              class="paper-real-card">
+
+            <img
+              src="./images/card-resist.jpg"
+              alt="手札のレジストカード"
+              class="paper-real-card">
+
+            <img
+              src="./images/hand-card-1.jpg"
+              alt="手札のカード"
+              class="paper-real-card">
+          </div>
+        </div>
+
+        <div class="rule-info-grid">
+          <div class="rule-info">
+            <h3>HAND / 手札</h3>
+            <p>使用前のカードを持つ場所です。</p>
+          </div>
+
+          <div class="rule-info">
+            <h3>FIELD / 場</h3>
+            <p>プレイしたサモンを置く場所です。</p>
+          </div>
+
+          <div class="rule-info">
+            <h3>COST / コストゾーン</h3>
+            <p>コストとして支払ったカードを置く場所です。</p>
+          </div>
+
+          <div class="rule-info">
+            <h3>COOL / クールゾーン</h3>
+            <p>倒されたサモンや使用後のカードを置く場所です。</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
-  <!-- 02 -->
+  <!-- 02 カードの種類 -->
   <section id="rule-02" class="rule-section rule-alt">
     <div class="rule-container">
 
@@ -112,403 +232,654 @@
         <span>02</span> カードの種類
       </h2>
 
-      <div class="rule-card-grid">
+      <div class="rule-paper rule-official-content">
+        <p>
+          カードには<strong>サモン・マギア・レジスト</strong>
+          の3種類があります。
+        </p>
 
-        <article class="rule-card">
-          <img src="./images/card-summon.jpg"
-               alt="サモンカード"
-               loading="lazy">
-          <h3>SUMMON</h3>
-          <h4>サモン</h4>
-          <p>
-            場に召喚して戦うカードです。
-            攻撃・ブロックや固有の能力を
-            使用できます。
-          </p>
-        </article>
+        <div class="rule-card-grid">
 
-        <article class="rule-card">
-          <img src="./images/card-magia.jpg"
-               alt="マギアカード"
-               loading="lazy">
-          <h3>MAGIA</h3>
-          <h4>マギア</h4>
-          <p>
-            魔法の効果を発揮するカードです。
-            ダメージや強化など、
-            さまざまな効果があります。
-          </p>
-        </article>
+          <article class="rule-card">
 
-        <article class="rule-card">
-          <img src="./images/card-resist.jpg"
-               alt="レジストカード"
-               loading="lazy">
-          <h3>RESIST</h3>
-          <h4>レジスト</h4>
-          <p>
-            相手ターンに条件を満たすことで
-            使用できるカードです。
-            相手の行動に対応できます。
-          </p>
-        </article>
 
+
+<img
+  src="./images/サモン.png"
+  alt="サモンカードの見方。①カード名、②コスト及び種類、③属性、④パワー、⑤能力、⑥カードナンバー"
+  class="rule-card-guide-image"
+  loading="lazy">
+
+
+            <h3>SUMMON</h3>
+            <h4>サモン</h4>
+
+<ol class="rule-card-parts">
+  <li>カード名</li>
+  <li>コスト及び種類</li>
+  <li>属性</li>
+  <li>パワー</li>
+  <li>能力</li>
+  <li>カードナンバー</li>
+</ol>
+
+          </article>
+
+          <article class="rule-card">
+
+
+
+<img
+  src="./images/マギア.png"
+  alt="マギアカードの見方。①カード名、②コスト及び種類、③属性、④使用の対象、⑤効果、⑥カードナンバー"
+  class="rule-card-guide-image"
+  loading="lazy">
+
+
+
+            <h3>MAGIA</h3>
+            <h4>マギア</h4>
+
+<ol class="rule-card-parts">
+  <li>カード名</li>
+  <li>コスト及び種類</li>
+  <li>属性</li>
+  <li>使用の対象</li>
+  <li>効果</li>
+  <li>カードナンバー</li>
+</ol>
+
+          </article>
+
+          <article class="rule-card">
+
+
+
+<img
+  src="./images/レジスト.png"
+  alt="レジストカードの見方。①カード名、②コスト及び種類、③属性、④使用の条件、⑤効果、⑥カードナンバー"
+  class="rule-card-guide-image"
+  loading="lazy">
+
+
+
+            <h3>RESIST</h3>
+            <h4>レジスト</h4>
+
+<ol class="rule-card-parts">
+  <li>カード名</li>
+  <li>コスト及び種類</li>
+  <li>属性</li>
+  <li>使用の条件</li>
+  <li>効果</li>
+  <li>カードナンバー</li>
+</ol>
+
+          </article>
+        </div>
+
+        <h3>サモン</h3>
+        <p>
+          自分のターンごとに<strong>1枚だけ</strong>
+          プレイできます。
+        </p>
+        <ul>
+          <li>プレイしたサモンはタテ向きで自分の場に出します。</li>
+          <li>サモンは場にあるとき、カードに書かれている能力を得ます。</li>
+          <li>
+            タテ向きのサモンをヨコ向きにすることで
+            「アタック」や「ブロック」を行えます。
+          </li>
+          <li>場に出したターンにはアタックできません。</li>
+          <li>
+            カード1枚からパワー以上のダメージを受けたとき、
+            クールゾーンに置きます。
+            <strong>ダメージは蓄積しません。</strong>
+          </li>
+        </ul>
+
+        <h3>マギア</h3>
+        <p>
+          自分のターンに<strong>何枚でも</strong>
+          プレイできます。
+        </p>
+        <ul>
+          <li>対象を選び、カードに書かれている効果を与えます。</li>
+          <li>効果を与えた後、クールゾーンに置きます。</li>
+        </ul>
+
+        <h3>レジスト</h3>
+        <p>
+          相手のターン中、条件を満たしたときに
+          プレイできます。
+        </p>
+        <ul>
+          <li>カードに書かれている効果を得ます。</li>
+          <li>効果を得た後、クールゾーンに置きます。</li>
+        </ul>
       </div>
-
     </div>
   </section>
 
-  <!-- 03 -->
+  <!-- 03 カードのプレイ -->
   <section id="rule-03" class="rule-section">
     <div class="rule-container">
 
       <h2 class="rule-heading">
-        <span>03</span> ゲームの準備
+        <span>03</span> カードのプレイ
       </h2>
 
-      <div class="rule-paper">
-        <ol>
-          <li>10枚のカードを用意します。</li>
-          <li>お互いのライフを設定します。</li>
-          <li>先攻・後攻を決定します。</li>
-          <li>10枚のカードを手札にします。</li>
-          <li>先攻プレイヤーから開始します。</li>
-        </ol>
+      <div class="rule-paper rule-official-content">
+        <p>
+          手札にあるカードは、
+          コストを支払うことでプレイできます。
+        </p>
 
         <p>
-          ゲーム中に通常のドローはありません。
-          最初の10枚をどのように使うかが
-          勝敗を左右します。
+          コストの支払いは<strong>プレイごと</strong>に行います。
+          手札からコストの数値と同じ枚数のカードを選び、
+          コストゾーンに裏向きで伏せて置きます。
         </p>
 
         <p class="rule-note">
-          ※初期ライフなどは対戦形式によって異なります。
+          例：コスト3のカードをプレイする場合は、
+          手札から3枚を選んでコストゾーンに置きます。
         </p>
       </div>
-
     </div>
   </section>
 
-  <!-- 04 -->
+  <!-- 04 アタックとブロック -->
   <section id="rule-04" class="rule-section rule-alt">
     <div class="rule-container">
 
       <h2 class="rule-heading">
-        <span>04</span> ゾーンの説明
+        <span>04</span> アタックとブロック
       </h2>
 
-      
-<div class="paper-field-guide">
+      <div class="rule-paper rule-official-content">
 
-  <h3>カードの配置</h3>
+        <h3>アタック</h3>
+        <p>
+          自分の場の<strong>タテ向きのサモン</strong>を
+          ヨコ向きにすることで、次の対象にアタックできます。
+        </p>
+        <ul>
+          <li>相手プレイヤー</li>
+          <li>ヨコ向きの相手サモン</li>
+        </ul>
+        <p>
+          <strong>タテ向きの相手サモンにはアタックできません。</strong>
+        </p>
 
-  <p>
-    対戦では、自分の前にカードを配置します。
-    コストゾーンはカードを裏向きに並べ、
-    クールゾーンは表向きに重ねて置きます。
-  </p>
-
-
-
-<!-- 紙のカード配置図 -->
-
-<div class="paper-field">
-
-  <div class="paper-field-main">
-
-    <!-- 場：サモン2枚 -->
-    <div class="paper-zone-title">
-      FIELD / 場（2枚）
-    </div>
-
-    <div class="paper-summons">
-
-      <img
-        src="./images/card-summon.jpg"
-        alt="場のサモンカード1"
-        class="paper-real-card"
-      >
-
-      <img
-        src="./images/field-summon-2.jpg"
-        alt="場のサモンカード2"
-        class="paper-real-card"
-      >
-
-    </div>
-
-    <!-- コストゾーン：裏向き3枚 -->
-    <div class="paper-zone-title">
-      COST / コストゾーン（3枚）
-    </div>
-
-    <div class="paper-costs">
-
-      <img src="./images/card-back.jpg"
-           alt="裏向きのコストカード1"
-           class="paper-real-card">
-
-      <img src="./images/card-back.jpg"
-           alt="裏向きのコストカード2"
-           class="paper-real-card">
-
-      <img src="./images/card-back.jpg"
-           alt="裏向きのコストカード3"
-           class="paper-real-card">
-
-    </div>
-
-  </div>
-
-  <!-- クールゾーン：表向き2枚 -->
-  <div class="paper-cool-area">
-
-    <div class="paper-zone-title">
-      COOL（2枚）
-    </div>
-
-    <div class="paper-cool-stack">
-
-      <img
-        src="./images/cool-card-1.jpg"
-        alt="クールゾーンのカード1"
-        class="paper-cool-real-card"
-      >
-
-      <img
-        src="./images/cool-card-2.jpg"
-        alt="クールゾーンのカード2"
-        class="paper-cool-real-card"
-      >
-
-    </div>
-
-    <p class="paper-cool-caption">
-      表向きにして、カード名が見えるように重ねる
-    </p>
-
-  </div>
-
-</div>
-
-<!-- 手札：3枚 -->
-<div class="paper-hand-area">
-
-  <div class="paper-zone-title">
-    HAND / 手札（3枚）
-  </div>
-
-  <div class="paper-hand-cards">
-
-    <img
-      src="./images/card-magia.jpg"
-      alt="手札のマギアカード"
-      class="paper-real-card"
-    >
-
-    <img
-      src="./images/card-resist.jpg"
-      alt="手札のレジストカード"
-      class="paper-real-card"
-    >  
+        
+<figure class="rule-diagram">
+  <img
+    src="./images/rule-attack.png"
+    alt="相手プレイヤーとヨコ向きの相手サモンにはアタック可能。タテ向きの相手サモンにはアタック不可。"
+    loading="lazy">
+  <figcaption>アタック対象の可否</figcaption>
+</figure>
 
 
-    <img
-      src="./images/hand-card-1.jpg"
-      alt="手札のレジストカード"
-      class="paper-real-card"
-    >
+        <h3>ブロック</h3>
+        <p>
+          相手のサモンから自分のプレイヤーへのアタックは、
+          タテ向きの自分のサモンをヨコ向きにすることで
+          ブロックできます。
+        </p>
+        <p>
+          <strong>サモンへのアタックはブロックできません。</strong>
+        </p>
 
-  </div>
+        
+<figure class="rule-diagram">
+  <img
+    src="./images/rule-block.png"
+    alt="プレイヤーへのアタックはタテ向きのサモンでブロック可能。サモンへのアタックはブロック不可。"
+    loading="lazy">
+  <figcaption>ブロックの可否</figcaption>
+</figure>
 
-</div>
+
+        <h3>アタック時の3パターン</h3>
+
+        <h4>① プレイヤーへのアタックがブロックされなかった場合</h4>
+        <p>
+          アタックしたサモンのパワーに等しいダメージを
+          相手プレイヤーに与えます。
+        </p>
+
+        <h4>② プレイヤーへのアタックがブロックされた場合</h4>
+        <p>
+          アタックしたサモンとブロックしたサモンで
+          バトルを行います。
+          相手プレイヤーにはダメージを与えられません。
+        </p>
+
+        <h4>③ 相手サモンへのアタック</h4>
+        <p>
+          アタックしたサモンとアタックを受けたサモンで
+          バトルを行います。
+        </p>
+
+        <h3>バトル</h3>
+        <p>
+          お互いのサモンは、パワーに等しいダメージを
+          バトル相手のサモンに与えます。
+        </p>
+        <p>
+          パワー以上のダメージを受けたサモンは、
+          クールゾーンに置かれます。
+        </p>
+
+        
+<figure class="rule-diagram">
+  <img
+    src="./images/rule-battle.png"
+    alt="サモン同士が互いのパワーに等しいダメージを与えるバトルの例"
+    loading="lazy">
+  <figcaption>サモン同士のバトル</figcaption>
+</figure>
 
 
-
-
-      <div class="rule-info-grid">
-
-        <div class="rule-info">
-          <h3>HAND / 手札</h3>
-          <p>
-            使用できるカードを持つ場所です。
-          </p>
-        </div>
-
-        <div class="rule-info">
-          <h3>FIELD / 場</h3>
-          <p>
-            召喚したサモンを置く場所です。
-          </p>
-        </div>
-
-        <div class="rule-info">
-          <h3>COST / コストゾーン</h3>
-          <p>
-            カードの使用に必要なコストを
-            管理する場所です。
-          </p>
-        </div>
-
-        <div class="rule-info">
-          <h3>COOL / クールゾーン</h3>
-          <p>
-            使用したカードや破壊された
-            サモンなどが置かれる場所です。
-          </p>
-        </div>
 
       </div>
-
     </div>
   </section>
 
-  <!-- 05 -->
+  <!-- 05 その他の基本ルール -->
   <section id="rule-05" class="rule-section">
     <div class="rule-container">
 
       <h2 class="rule-heading">
-        <span>05</span> ターンの進行
+        <span>05</span> その他の基本ルール
       </h2>
 
-      <div class="rule-paper">
-        <ol>
-          <li>自分のターンを開始します。</li>
-          <li>サモンを攻撃可能な状態にします。</li>
-          <li>コストを回復します。</li>
-          <li>クールゾーンからカードを回収します。</li>
-          <li>カードの使用や攻撃を行います。</li>
-          <li>ターンを終了します。</li>
-        </ol>
+      <div class="rule-paper rule-official-content">
 
+        <h3>1. ダメージが決まるタイミング</h3>
+
+        <h4>プレイヤーへのダメージ</h4>
         <p>
-          自分のターンが終了すると、
-          相手プレイヤーのターンになります。
+          「プレイヤーにアタックしたとき」の処理が
+          すべて終了したときに決まります。
+        </p>
+
+        <h4>バトルで与えるダメージ</h4>
+        <p>
+          「バトル開始時」の処理が
+          すべて終了したときに決まります。
+        </p>
+
+        <h3>2. 同時に重なる能力・効果・条件の処理</h3>
+        <ul>
+          <li>
+            ターンを行っているプレイヤーのカードを
+            先に処理します。
+          </li>
+          <li>
+            同一プレイヤーのカードが同時に重なった場合、
+            そのプレイヤーが望む順番で処理します。
+          </li>
+        </ul>
+
+        <h3>3. 赤文字で書かれたルール</h3>
+        <p>
+          マギアやレジストの効果欄に
+          <strong>赤文字</strong>で書かれている内容は、
+          「カードが持つルール」です。
+        </p>
+        <p>
+          カードの効果が無くされても、
+          そのルールは無くなりません。
         </p>
       </div>
-
     </div>
   </section>
 
-  <!-- 06 -->
+  <!-- 06 対戦準備 -->
   <section id="rule-06" class="rule-section rule-alt">
     <div class="rule-container">
 
       <h2 class="rule-heading">
-        <span>06</span> サモンと戦闘
+        <span>06</span> 対戦準備
       </h2>
 
-      <div class="rule-paper">
-        <h3>サモンの召喚</h3>
+      <div class="rule-paper rule-official-content">
+
         <p>
-          1ターンに召喚できるサモンは
-          原則として1体です。
-        </p>
-        <p>
-          召喚したターンは、
-          特別な能力がない限り攻撃できません。
+          対戦するゲーム形式を決定します。
+          ゲーム形式の詳細は
+          <a href="#rule-09">第9章</a>を参照してください。
         </p>
 
-        <h3>攻撃</h3>
-        <p>
-          攻撃可能なサモンを選び、
-          相手プレイヤーまたは
-          攻撃可能な相手サモンを対象にします。
-        </p>
-        <p>
-          通常、相手のタテ向きのサモンには
-          攻撃できません。
+        <p class="rule-emphasis">
+          最大3回の対戦を行い、
+          先に2勝したプレイヤーが勝者となります。
         </p>
 
-        <h3>ブロック</h3>
+        <h3>ライフポイントの決定</h3>
         <p>
-          攻撃を受ける側は、
-          条件を満たすサモンで
-          ブロックできます。
+          任意の方法でライフポイントを決定します。
+          各形式の推奨ライフポイントは第9章に記載しています。
         </p>
 
-        <h3>ダメージ</h3>
+        <h3>デッキの作成</h3>
         <p>
-          サモン同士の戦闘では、
-          お互いにダメージを与えます。
+          ゲーム形式に従ってデッキを作成します。
+          10枚のカードを対戦に使用します。
         </p>
+
+        <h3>先攻・後攻の決定</h3>
+        <ul>
+          <li>
+            <strong>1戦目：</strong>
+            ジャンケンで勝ったプレイヤーが先攻です。
+          </li>
+          <li>
+            <strong>2・3戦目：</strong>
+            直前の対戦で負けたプレイヤーが先攻です。
+          </li>
+        </ul>
       </div>
-
     </div>
   </section>
 
-  <!-- 07 -->
+  <!-- 07 対戦手順 -->
   <section id="rule-07" class="rule-section">
     <div class="rule-container">
 
       <h2 class="rule-heading">
-        <span>07</span> マギアとレジスト
+        <span>07</span> 対戦手順
       </h2>
 
-      <div class="rule-paper">
-        <h3>マギア</h3>
+      <div class="rule-paper rule-official-content">
+
         <p>
-          マギアは、必要なコストを支払って
-          使用するカードです。
+          デッキのカード10枚すべてを手札に持って
+          対戦を開始します。
         </p>
         <p>
-          対象を選ぶ効果の場合は、
-          適切な対象を指定して使用します。
+          勝利条件を満たすまで、
+          先攻と後攻が交互にターンを行います。
         </p>
 
-        <h3>レジスト</h3>
+        <h3>自分のターン開始時</h3>
+        <ol>
+          <li>
+            ヨコ向きの自分のサモンすべてを
+            タテ向きにします。
+          </li>
+          <li>
+            コストゾーンのカードを
+            すべて手札に戻します。
+          </li>
+          <li>
+            クールゾーンからカードを1枚だけ選び、
+            手札に戻します。
+          </li>
+        </ol>
+
+        <h3>自分のターン中</h3>
         <p>
-          レジストは相手ターンに、
-          使用条件を満たしたときに
-          使用できるカードです。
+          カードのプレイやサモンのアタックを
+          自由な順番で行います。
         </p>
+        <ul>
+          <li>
+            <strong>サモンのプレイ：</strong>
+            1ターン中に1枚だけプレイできます。
+          </li>
+          <li>
+            <strong>マギアのプレイ：</strong>
+            1ターン中に何枚でもプレイできます。
+          </li>
+          <li>
+            <strong>サモンのアタック：</strong>
+            1体ずつ行います。
+            アタック中はカードをプレイできません。
+          </li>
+          <li>
+            <strong>ターン終了の宣言：</strong>
+            自分のターンを終了します。
+          </li>
+        </ul>
+
+        <p class="rule-note">
+          行動例：カード①のプレイ →
+          サモン①のアタック →
+          カード②のプレイ →
+          サモン②のアタック →
+          ターン終了の宣言
+        </p>
+
+        <h3>相手のターンに行えること</h3>
+
+        <h4>サモンでブロック</h4>
         <p>
-          ダメージの軽減や無効化など、
-          相手の行動に対応する効果があります。
+          相手のサモン1体から自分へのアタックを、
+          タテ向きのサモン1体でブロックできます。
+        </p>
+
+        <h4>レジストのプレイ</h4>
+        <p>
+          条件を満たしたときにプレイできます。
+          レジストの効果を行った後、
+          条件を満たしていれば続けて別のレジストを
+          プレイすることもできます。
         </p>
       </div>
-
     </div>
   </section>
 
-  <!-- 08 -->
+  <!-- 08 勝利条件 -->
   <section id="rule-08" class="rule-section rule-alt">
     <div class="rule-container">
 
       <h2 class="rule-heading">
-        <span>08</span> コストとクール
+        <span>08</span> 勝利条件
       </h2>
 
-      <div class="rule-paper">
-        <h3>コスト</h3>
+      <div class="rule-paper rule-official-content">
+
         <p>
-          カードの使用には、
-          指定されたコストが必要です。
-        </p>
-        <p>
-          コストゾーンのカードを使用して
-          必要なコストを支払います。
+          サモンのアタックやマギアの効果で
+          相手にダメージを与え、
+          <strong>相手のライフポイントを0にした
+          プレイヤーの勝利</strong>となります。
         </p>
 
-        <h3>クールゾーン</h3>
         <p>
-          使用済みのカードや破壊されたサモンは、
-          効果に応じてクールゾーンに置かれます。
-        </p>
-        <p>
-          自分のターン開始時には、
-          クールゾーンからカードを
-          1枚回収します。
+          対戦中に同じ局面
+          （場・クールゾーン・ライフポイント）が繰り返され、
+          対戦が進行不可能となった場合は、
+          <strong>後攻プレイヤーの勝利</strong>となります。
         </p>
       </div>
+    </div>
+  </section>
 
+  <!-- 09 ゲーム形式 -->
+  <section id="rule-09" class="rule-section">
+    <div class="rule-container">
+
+      <h2 class="rule-heading">
+        <span>09</span> ゲーム形式
+      </h2>
+
+      <div class="rule-paper rule-official-content">
+
+        <h3>ビルドルール</h3>
+
+        <h4>使用セット</h4>
+        <p>
+          すべてのセット
+          （基本セット、Folklore、Mythology）
+          から使用するセットを決めます。
+          複数のセットを使用しても遊べます。
+        </p>
+        <p>
+          各プレイヤーは同じ種類のセットを使用します。
+          （同一セットが2セット必要）
+        </p>
+
+        <h4>推奨ライフポイント</h4>
+        <ul>
+          <li>1種類のセットのみを使用：1～5</li>
+          <li>複数の種類のセットを使用：5</li>
+        </ul>
+
+        <h4>デッキの作成方法</h4>
+        <p>
+          好きなカード10枚を選び、デッキとします。
+          デッキ以外から好きなカード3枚を選び、
+          サイドデッキとします。
+        </p>
+        <p>
+          サイドデッキのカードは、
+          対戦と対戦の間にデッキのカードと
+          入れ替えることができます。
+        </p>
+        <p>
+          <strong>
+            同じ名前のカードはデッキに
+            1枚しか入れられません。
+          </strong>
+        </p>
+
+        <hr>
+
+        <h3>ランダムルール</h3>
+
+        <h4>使用セット</h4>
+        <p>
+          すべてのセット
+          （基本セット、Folklore、Mythology）
+          から1つを選んで使用します。
+        </p>
+        <p>
+          各プレイヤーは同じ種類のセットを使用します。
+          （同一セットが2セット必要）
+        </p>
+
+        <h4>推奨ライフポイント</h4>
+        <p>5</p>
+
+        <h4>デッキの作成方法</h4>
+        <ol>
+          <li>
+            <strong>1戦目：</strong>
+            セット内の全カード32枚をシャッフルし、
+            上から10枚をデッキとします。
+          </li>
+          <li>
+            <strong>2戦目：</strong>
+            1戦目のデッキ以外の22枚をシャッフルし、
+            上から10枚をデッキとします。
+          </li>
+          <li>
+            <strong>3戦目：</strong>
+            1・2戦目のデッキ以外の12枚をシャッフルし、
+            上から10枚をデッキとします。
+          </li>
+        </ol>
+
+        <hr>
+
+        <h3>ドラフトルール</h3>
+
+        <h4>使用セット</h4>
+        <p>
+          すべてのセット
+          （基本セット、Folklore、Mythology）
+          から好きなセットを使用します。
+        </p>
+        <p>
+          使用するセットの数で対応人数が変わります。
+          同じ種類のセットを2つ以上使用しても遊べます。
+        </p>
+
+        <h4>対応人数</h4>
+        <ul>
+          <li>1セット：2名</li>
+          <li>2セット：2～4名</li>
+          <li>3セット：2～6名</li>
+          <li>4セット：2～8名</li>
+        </ul>
+
+        <h4>推奨ライフポイント</h4>
+        <p>5</p>
+
+        <h4>デッキの作成方法</h4>
+        <ol>
+          <li>
+            カードをすべてシャッフルし、
+            16枚のカードの束を人数分つくり、
+            裏向きで1人に1束ずつ配ります。
+          </li>
+          <li>
+            各プレイヤーは配られた束から
+            1枚を選んで取り、
+            残りを左隣の人（時計回り）に渡します。
+          </li>
+          <li>
+            束のカードが無くなるまで繰り返します。
+          </li>
+          <li>
+            選び取った16枚から好きな10枚をデッキ、
+            残り6枚をサイドデッキとします。
+          </li>
+        </ol>
+
+        <p>
+          サイドデッキのカードは、
+          対戦と対戦の間にデッキのカードと
+          入れ替えることができます。
+        </p>
+        <p>
+          <strong>
+            同じ名前のカードを複数枚
+            デッキに入れることができます。
+          </strong>
+        </p>
+
+        <hr>
+
+        <h3>ハーフビルドルール</h3>
+        <p>
+          1セット32枚での遊び方です。
+        </p>
+
+        <h4>推奨ライフポイント</h4>
+        <p>5</p>
+
+        <h4>デッキの作成方法</h4>
+        <ol>
+          <li>
+            全カード32枚をシャッフルし、
+            16枚ずつ各プレイヤーに配ります。
+          </li>
+          <li>
+            各プレイヤーは配られた16枚から
+            好きな10枚をデッキ、
+            残り6枚をサイドデッキとします。
+          </li>
+        </ol>
+
+        <p>
+          サイドデッキのカードは、
+          対戦と対戦の間にデッキのカードと
+          入れ替えることができます。
+        </p>
+
+      </div>
     </div>
   </section>
 
   <section class="rule-section">
     <div class="rule-container rule-bottom">
-      <a href="./index.html"
-         class="button button-primary">
+      <a href="./index.html" class="button button-primary">
         トップページへ戻る
       </a>
     </div>
