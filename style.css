@@ -1,0 +1,2083 @@
+
+/* ========================================
+   基本設定
+======================================== */
+
+:root {
+  --paper: #f3ead5;
+  --paper-light: #fffaf0;
+  --paper-dark: #e4d2ad;
+  --brown: #38251a;
+  --brown-light: #63442b;
+  --gold: #a47a35;
+  --gold-light: #d8b777;
+  --text: #382b20;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  font-family:
+    "Yu Mincho",
+    "Hiragino Mincho ProN",
+    "Noto Serif JP",
+    serif;
+  line-height: 1.9;
+  background-color: var(--paper);
+  background-image:
+    radial-gradient(
+      ellipse at 20% 15%,
+      rgba(255, 255, 255, 0.45),
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 80% 80%,
+      rgba(133, 89, 38, 0.12),
+      transparent 60%
+    );
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+}
+
+/* ========================================
+   ヘッダー
+======================================== */
+
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: var(--brown);
+  border-bottom: 3px solid var(--gold);
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.2);
+}
+
+.header-inner {
+  max-width: 1300px;
+  min-height: 74px;
+  margin: auto;
+  padding: 0 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.site-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--gold-light);
+  font-size: 17px;
+  font-weight: bold;
+  letter-spacing: 1.5px;
+}
+
+.brand-mark {
+  font-size: 26px;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+}
+
+.site-nav a {
+  color: #f7edd8;
+  font-size: 12px;
+  letter-spacing: 1px;
+  transition: color 0.2s;
+}
+
+.site-nav a:hover {
+  color: var(--gold-light);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: 1px solid var(--gold-light);
+  color: var(--gold-light);
+  border-radius: 5px;
+  padding: 2px 12px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+/* ========================================
+   メインビジュアル
+======================================== */
+
+.hero {
+  min-height: 570px;
+  padding: 90px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+
+  background:
+    linear-gradient(
+      rgba(245, 231, 198, 0.8),
+      rgba(220, 195, 151, 0.85)
+    ),
+    radial-gradient(
+      ellipse at center,
+      #fff9e9,
+      #c5a573
+    );
+
+  border-bottom: 5px double var(--gold);
+}
+
+.hero-ornament {
+  color: var(--gold);
+  font-size: 16px;
+  letter-spacing: 4px;
+  margin-bottom: 30px;
+}
+
+.hero-subtitle {
+  color: var(--brown-light);
+  font-size: 12px;
+  letter-spacing: 5px;
+}
+
+.hero h1 {
+  margin: 15px 0;
+  color: var(--brown);
+  font-size: clamp(36px, 6vw, 76px);
+  line-height: 1.25;
+  letter-spacing: 5px;
+  text-shadow: 2px 3px 0 rgba(164, 122, 53, 0.2);
+}
+
+.hero h1 span {
+  color: var(--brown-light);
+}
+
+.hero-divider {
+  color: var(--gold);
+  letter-spacing: 5px;
+  margin: 20px 0;
+}
+
+.hero-description {
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+
+/* ========================================
+   共通セクション
+======================================== */
+
+.section {
+  padding: 90px 22px;
+}
+
+.section-alt {
+  background: rgba(145, 103, 52, 0.07);
+  border-top: 1px solid rgba(164, 122, 53, 0.2);
+  border-bottom: 1px solid rgba(164, 122, 53, 0.2);
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.section-en {
+  color: var(--gold);
+  font-size: 12px;
+  letter-spacing: 4px;
+}
+
+.section-heading h2 {
+  margin: 8px 0;
+  font-size: clamp(25px, 3.5vw, 36px);
+  color: var(--brown);
+}
+
+.heading-line {
+  color: var(--gold);
+  font-size: 22px;
+}
+
+.paper-panel {
+  max-width: 950px;
+  margin: auto;
+  padding: 40px 45px;
+  background: var(--paper-light);
+  border: 1px solid var(--gold);
+  outline: 1px solid rgba(164, 122, 53, 0.35);
+  outline-offset: -9px;
+  box-shadow: 0 8px 24px rgba(64, 39, 15, 0.1);
+}
+
+.paper-panel p {
+  margin: 0 0 18px;
+}
+
+.paper-panel p:last-child {
+  margin-bottom: 0;
+}
+
+.center {
+  text-align: center;
+}
+
+/* ========================================
+   ボタン
+======================================== */
+
+.button {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 3px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+  transition:
+    transform 0.2s,
+    background 0.2s;
+}
+
+.button:hover {
+  transform: translateY(-3px);
+}
+
+.button-primary {
+  background: var(--brown);
+  border: 1px solid var(--gold);
+  color: #fff3d7;
+}
+
+.button-primary:hover {
+  background: var(--brown-light);
+}
+
+.button-outline {
+  border: 1px solid var(--gold);
+  color: var(--brown);
+  margin-top: 15px;
+}
+
+.button-outline:hover {
+  background: var(--paper-dark);
+}
+
+/* ========================================
+   カード紹介
+======================================== */
+
+.card-grid {
+  max-width: 1150px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.feature-card {
+  padding: 35px 25px;
+  text-align: center;
+  background: var(--paper-light);
+  border: 2px solid var(--gold);
+  box-shadow: 0 6px 18px rgba(64, 39, 15, 0.1);
+}
+
+.feature-icon {
+  color: var(--gold);
+  font-size: 54px;
+  line-height: 1.5;
+}
+
+.feature-card h3 {
+  margin: 12px 0 0;
+  color: var(--brown);
+  font-size: 24px;
+  letter-spacing: 3px;
+}
+
+.feature-jp {
+  color: var(--gold);
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.feature-card > p:last-child {
+  text-align: left;
+  font-size: 14px;
+}
+
+/* ========================================
+   プレイエリア
+======================================== */
+
+.section-play {
+  background: linear-gradient(
+    135deg,
+    #e3d0aa,
+    #f5e9d1,
+    #dbc297
+  );
+}
+
+.play-grid {
+  max-width: 950px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.play-panel {
+  padding: 35px 25px;
+  background: var(--paper-light);
+  border: 1px solid var(--gold);
+  text-align: center;
+}
+
+.play-panel h3 {
+  margin-top: 0;
+  color: var(--brown);
+  letter-spacing: 2px;
+}
+
+.coming-soon {
+  color: var(--gold);
+  font-weight: bold;
+}
+
+/* ========================================
+   フッター
+======================================== */
+
+.site-footer {
+  padding: 45px 20px;
+  text-align: center;
+  background: var(--brown);
+  color: #e7d5b5;
+  border-top: 4px solid var(--gold);
+}
+
+.footer-title {
+  color: var(--gold-light);
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 3px;
+}
+
+.site-footer p {
+  margin: 8px 0;
+}
+
+.copyright {
+  font-size: 12px;
+  opacity: 0.8;
+}
+
+/* ========================================
+   スマートフォン対応
+======================================== */
+
+@media (max-width: 900px) {
+
+  .header-inner {
+    min-height: 65px;
+    padding: 0 16px;
+  }
+
+  .site-brand {
+    font-size: 13px;
+    letter-spacing: 0.5px;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .site-nav {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 15px 20px;
+    background: var(--brown);
+    border-bottom: 2px solid var(--gold);
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+  }
+
+  .site-nav.open {
+    display: flex;
+  }
+
+  .site-nav a {
+    padding: 12px;
+    border-bottom: 1px solid rgba(255,255,255,0.12);
+    font-size: 14px;
+  }
+
+  .hero {
+    min-height: 490px;
+    padding: 65px 15px;
+  }
+
+  .hero h1 {
+    letter-spacing: 2px;
+  }
+
+  .hero-description {
+    font-size: 14px;
+  }
+
+  .section {
+    padding: 65px 16px;
+  }
+
+  .paper-panel {
+    padding: 35px 25px;
+  }
+
+  .card-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+  }
+
+  .play-grid {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+  }
+
+}
+
+@media (max-width: 380px) {
+
+  .site-brand {
+    font-size: 11px;
+  }
+
+  .hero-ornament {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+  .hero h1 {
+    font-size: 33px;
+  }
+
+  .paper-panel {
+    padding: 30px 20px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .button {
+    transition: none;
+  }
+}
+
+
+/* ========================================
+   公式ロゴ
+======================================== */
+
+.hero-logo {
+  width: min(90%, 650px);
+  margin: 15px auto 25px;
+  line-height: 1;
+}
+
+.hero-logo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  filter: drop-shadow(
+    0 5px 8px rgba(50, 30, 10, 0.25)
+  );
+}
+
+
+/* ========================================
+   メインカード表示
+======================================== */
+
+.hero-cards {
+  position: relative;
+  width: 460px;
+  max-width: 100%;
+  height: 340px;
+  margin: 20px auto 25px;
+}
+
+.hero-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 190px;
+  height: auto;
+  max-height: 300px;
+  object-fit: contain;
+  transform-origin: center 90%;
+  filter: drop-shadow(
+    0 10px 10px rgba(40, 25, 10, 0.35)
+  );
+  transition: transform 0.3s ease;
+}
+
+/* 左側のカード */
+
+.hero-card-left {
+  z-index: 1;
+  transform:
+    translateX(-95%)
+    translateY(25px)
+    rotate(-18deg);
+}
+
+/* 中央のカード */
+
+.hero-card-center {
+  z-index: 3;
+  transform:
+    translateX(-50%)
+    translateY(0)
+    rotate(0deg);
+}
+
+/* 右側のカード */
+
+.hero-card-right {
+  z-index: 2;
+  transform:
+    translateX(-5%)
+    translateY(25px)
+    rotate(18deg);
+}
+
+
+/* ========================================
+   スマートフォン対応
+======================================== */
+
+@media (max-width: 600px) {
+
+  .hero-logo {
+    width: 95%;
+    margin-bottom: 15px;
+  }
+
+  .hero-cards {
+    width: 300px;
+    height: 245px;
+    margin: 10px auto 20px;
+  }
+
+  .hero-card {
+    width: 130px;
+    max-height: 210px;
+  }
+
+  .hero-card-left {
+    transform:
+      translateX(-95%)
+      translateY(20px)
+      rotate(-18deg);
+  }
+
+  .hero-card-center {
+    transform:
+      translateX(-50%)
+      translateY(0)
+      rotate(0deg);
+  }
+
+  .hero-card-right {
+    transform:
+      translateX(-5%)
+      translateY(20px)
+      rotate(18deg);
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-card {
+    transition: none;
+  }
+}
+
+/* ========================================
+   Elementis Summoner タイトル
+======================================== */
+
+.hero-title-area {
+  width: 100%;
+  max-width: 750px;
+  margin: 15px auto 25px;
+  text-align: center;
+}
+
+.hero-title-decoration {
+  color: #a47a35;
+  font-size: 18px;
+  letter-spacing: 6px;
+  margin: 15px 0;
+}
+
+.hero-main-title {
+  margin: 20px 0 10px;
+  color: #38251a;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(38px, 6vw, 78px);
+  line-height: 1.2;
+  letter-spacing: 5px;
+  text-shadow:
+    1px 1px 0 #d8b777,
+    2px 2px 0 #a47a35,
+    4px 5px 8px rgba(50, 30, 10, 0.25);
+}
+
+.hero-main-title span {
+  display: block;
+  color: #63442b;
+}
+
+.hero-title-jp {
+  margin: 12px 0;
+  font-size: 15px;
+  letter-spacing: 5px;
+  color: #63442b;
+}
+
+@media (max-width: 600px) {
+
+  .hero-main-title {
+    font-size: clamp(30px, 9vw, 48px);
+    letter-spacing: 2px;
+  }
+
+  .hero-title-decoration {
+    font-size: 13px;
+    letter-spacing: 2px;
+  }
+
+  .hero-title-jp {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+
+}
+
+/* ========================================
+   カード紹介画像
+======================================== */
+
+.feature-card-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 310px;
+  margin-bottom: 20px;
+}
+
+.feature-card-image img {
+  display: block;
+  width: auto;
+  max-width: 100%;
+  max-height: 290px;
+  object-fit: contain;
+
+  filter: drop-shadow(
+    0 8px 8px rgba(50, 30, 10, 0.3)
+  );
+
+  transition: transform 0.25s ease;
+}
+
+.feature-card:hover .feature-card-image img {
+  transform: translateY(-6px);
+}
+
+.feature-description {
+  line-height: 1.9;
+  text-align: left;
+}
+
+/* スマートフォン */
+
+@media (max-width: 600px) {
+
+  .feature-card-image {
+    height: 270px;
+  }
+
+  .feature-card-image img {
+    max-height: 250px;
+  }
+
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .feature-card-image img {
+    transition: none;
+  }
+
+  .feature-card:hover .feature-card-image img {
+    transform: none;
+  }
+}
+
+
+
+/* ========================================
+   RULE PAGE
+======================================== */
+
+.rule-hero {
+  padding: 75px 20px;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #e6d3ae,
+    #fff7e5,
+    #ddc69a
+  );
+  border-bottom: 3px double #a47a35;
+}
+
+.rule-hero h1 {
+  margin: 10px 0;
+  color: #38251a;
+  font-size: clamp(32px, 5vw, 52px);
+}
+
+.rule-hero p {
+  color: #a47a35;
+  letter-spacing: 4px;
+}
+
+.rule-section {
+  padding: 55px 20px;
+  scroll-margin-top: 85px;
+}
+
+.rule-alt {
+  background: rgba(145, 103, 52, 0.07);
+}
+
+.rule-container {
+  max-width: 1050px;
+  margin: auto;
+}
+
+.rule-heading {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  color: #38251a;
+  font-size: clamp(23px, 3vw, 30px);
+  border-bottom: 2px solid #a47a35;
+  padding-bottom: 12px;
+  margin: 0 0 30px;
+}
+
+.rule-heading span {
+  color: #a47a35;
+  font-family: Georgia, serif;
+  font-size: 32px;
+}
+
+.rule-paper {
+  background: #fffaf0;
+  border: 1px solid #a47a35;
+  padding: 35px 40px;
+  line-height: 2;
+  box-shadow: 0 5px 18px rgba(50,30,10,0.08);
+}
+
+.rule-paper h3 {
+  color: #63442b;
+  margin-top: 30px;
+  border-left: 4px solid #a47a35;
+  padding-left: 12px;
+}
+
+.rule-paper h3:first-child {
+  margin-top: 0;
+}
+
+.rule-paper li {
+  padding: 5px 0;
+}
+
+.rule-emphasis {
+  font-weight: bold;
+  color: #8c6329;
+  text-align: center;
+  font-size: 18px;
+}
+
+.rule-note {
+  font-size: 13px;
+  color: #776958;
+}
+
+/* 目次 */
+
+.rule-toc {
+  background: #fffaf0;
+  border: 2px solid #a47a35;
+  padding: 30px;
+}
+
+.rule-toc h2 {
+  margin-top: 0;
+  color: #63442b;
+  text-align: center;
+  letter-spacing: 3px;
+}
+
+.rule-toc a {
+  display: block;
+  padding: 8px 12px;
+  border-bottom: 1px solid #e4d2ad;
+}
+
+.rule-toc a:hover {
+  background: #f3ead5;
+}
+
+/* カード */
+
+.rule-card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.rule-card {
+  padding: 25px;
+  background: #fffaf0;
+  border: 1px solid #a47a35;
+  text-align: center;
+}
+
+.rule-card img {
+  display: block;
+  max-width: 100%;
+  width: auto;
+  height: 280px;
+  margin: 0 auto 20px;
+  object-fit: contain;
+}
+
+.rule-card h3 {
+  color: #38251a;
+  margin-bottom: 0;
+}
+
+.rule-card h4 {
+  color: #a47a35;
+  margin-top: 0;
+}
+
+.rule-card p {
+  text-align: left;
+  font-size: 14px;
+}
+
+/* ゾーン */
+
+.rule-info-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.rule-info {
+  background: #fffaf0;
+  padding: 25px;
+  border: 1px solid #a47a35;
+}
+
+.rule-info h3 {
+  margin-top: 0;
+  color: #63442b;
+}
+
+/* 最下部 */
+
+.rule-bottom {
+  text-align: center;
+}
+
+/* スマートフォン */
+
+@media (max-width: 700px) {
+
+  .rule-section {
+    padding: 40px 15px;
+  }
+
+  .rule-paper {
+    padding: 25px 20px;
+  }
+
+  .rule-card-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin: auto;
+  }
+
+  .rule-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .rule-toc {
+    padding: 20px;
+  }
+
+  .rule-card img {
+    height: 250px;
+  }
+
+}
+
+
+/* ========================================
+   紙のカード用プレイフィールド
+======================================== */
+
+.paper-field-guide {
+  padding: 25px;
+  margin-bottom: 30px;
+  background: #fffaf0;
+  border: 1px solid #a47a35;
+}
+
+.paper-field-guide h3 {
+  margin-top: 0;
+  color: #63442b;
+  text-align: center;
+}
+
+.paper-field-guide > p {
+  line-height: 1.9;
+}
+
+.paper-field {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 145px;
+  gap: 15px;
+  padding: 25px 15px;
+  background: #e8d9b9;
+  border: 2px solid #a47a35;
+  border-radius: 5px;
+}
+
+.paper-field-main {
+  min-width: 0;
+}
+
+.paper-zone-title {
+  margin-bottom: 12px;
+  color: #63442b;
+  font-size: 13px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.paper-summons,
+.paper-costs {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.paper-summons {
+  margin-bottom: 30px;
+}
+
+.paper-summon-card,
+.paper-cost-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 75px;
+  aspect-ratio: 0.72;
+  border-radius: 5px;
+  flex-shrink: 1;
+  min-width: 0;
+}
+
+.paper-summon-card {
+  background: #fff7e8;
+  border: 3px double #a47a35;
+  color: #63442b;
+  font-size: 10px;
+}
+
+.paper-cost-card {
+  background: #493022;
+  border: 3px double #c9a76a;
+  color: #d8b777;
+  font-size: 24px;
+}
+
+/* クールゾーン */
+
+.paper-cool-area {
+  min-width: 0;
+  border-left: 1px dashed #a47a35;
+  padding-left: 15px;
+}
+
+.paper-cool-stack {
+  position: relative;
+  height: 235px;
+  width: 100%;
+}
+
+.paper-cool-card {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: min(100%, 95px);
+  aspect-ratio: 0.72;
+  transform: translateX(-50%);
+  background: #fff7e8;
+  border: 2px solid #a47a35;
+  border-radius: 5px;
+  box-shadow: 0 3px 5px rgba(50,30,10,.18);
+}
+
+.paper-cool-card:nth-child(1) {
+  top: 0;
+  z-index: 1;
+}
+
+.paper-cool-card:nth-child(2) {
+  top: 36px;
+  z-index: 2;
+}
+
+.paper-cool-card:nth-child(3) {
+  top: 72px;
+  z-index: 3;
+}
+
+.paper-cool-card span {
+  display: block;
+  padding: 6px 4px;
+  color: #38251a;
+  font-size: 10px;
+  text-align: center;
+  background: #e4d2ad;
+}
+
+.paper-cool-caption {
+  font-size: 11px;
+  text-align: center;
+  color: #63442b;
+}
+
+.paper-field-caption {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 13px;
+  color: #63442b;
+}
+
+/* スマートフォン */
+
+@media (max-width: 600px) {
+
+  .paper-field-guide {
+    padding: 12px;
+  }
+
+  .paper-field {
+    grid-template-columns: minmax(0, 1fr) 85px;
+    gap: 8px;
+    padding: 15px 6px;
+  }
+
+  .paper-summons,
+  .paper-costs {
+    gap: 4px;
+  }
+
+  .paper-summon-card,
+  .paper-cost-card {
+    width: 100%;
+    font-size: 7px;
+  }
+
+  .paper-cool-area {
+    padding-left: 6px;
+  }
+
+  .paper-cool-card span {
+    font-size: 7px;
+    padding: 4px 2px;
+  }
+
+  .paper-cool-stack {
+    height: 175px;
+  }
+
+  .paper-cool-card:nth-child(2) {
+    top: 26px;
+  }
+
+  .paper-cool-card:nth-child(3) {
+    top: 52px;
+  }
+
+  .paper-zone-title {
+    font-size: 10px;
+  }
+}
+
+/* ========================================
+   手札の配置
+======================================== */
+
+.paper-hand-area {
+  padding: 18px 12px;
+  background: #e8d9b9;
+  border: 2px solid #a47a35;
+  border-top: none;
+  border-radius: 0 0 5px 5px;
+}
+
+.paper-hand-cards {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.paper-hand-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75px;
+  aspect-ratio: 0.72;
+  border-radius: 5px;
+  border: 3px double #a47a35;
+  background: #fff7e8;
+  color: #63442b;
+  font-size: 10px;
+}
+
+/* クールゾーン：2枚用 */
+
+.paper-cool-stack {
+  height: 185px;
+}
+
+.paper-cool-card:nth-child(2) {
+  top: 36px;
+}
+
+/* スマートフォン */
+
+@media (max-width: 600px) {
+
+  .paper-hand-card {
+    width: 55px;
+    font-size: 9px;
+  }
+
+  .paper-cool-stack {
+    height: 145px;
+  }
+
+  .paper-cool-card:nth-child(2) {
+    top: 26px;
+  }
+
+}
+
+
+/* ========================================
+   実際のカード画像
+======================================== */
+
+.paper-real-card {
+  display: block;
+  width: 75px;
+  max-width: 100%;
+  height: auto;
+  aspect-ratio: 0.72;
+  object-fit: contain;
+  flex-shrink: 1;
+
+  filter: drop-shadow(
+    0 3px 4px rgba(40,25,10,0.25)
+  );
+}
+
+/* クールゾーン */
+
+.paper-cool-stack {
+  position: relative;
+  height: 185px;
+}
+
+.paper-cool-real-card {
+  position: absolute;
+  left: 50%;
+  width: min(100%, 95px);
+  height: auto;
+  aspect-ratio: 0.72;
+  object-fit: contain;
+
+  transform: translateX(-50%);
+
+  filter: drop-shadow(
+    0 3px 4px rgba(40,25,10,0.25)
+  );
+}
+
+.paper-cool-real-card:nth-child(1) {
+  top: 0;
+  z-index: 1;
+}
+
+.paper-cool-real-card:nth-child(2) {
+  top: 36px;
+  z-index: 2;
+}
+
+/* スマートフォン */
+
+@media (max-width: 600px) {
+
+  .paper-real-card {
+    width: 55px;
+  }
+
+  .paper-cool-real-card {
+    width: min(100%, 65px);
+  }
+
+  .paper-cool-stack {
+    height: 145px;
+  }
+
+  .paper-cool-real-card:nth-child(2) {
+    top: 26px;
+  }
+
+}
+
+
+/* ========================================
+   CARD LIST
+======================================== */
+
+.card-search-panel {
+  display: grid;
+  grid-template-columns: 2fr repeat(3, 1fr) auto;
+  gap: 12px;
+  margin-bottom: 25px;
+  padding: 20px;
+  background: #fffaf0;
+  border: 1px solid #a47a35;
+}
+
+.card-search-panel input,
+.card-search-panel select,
+.card-search-panel button {
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #a47a35;
+  border-radius: 4px;
+  font: inherit;
+}
+
+.card-search-panel button {
+  background: #63442b;
+  color: #fffaf0;
+  cursor: pointer;
+}
+
+.card-result-count {
+  margin-bottom: 20px;
+  color: #63442b;
+  text-align: right;
+}
+
+.official-card-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.official-card-item {
+  min-width: 0;
+  padding: 12px;
+  background: #fffaf0;
+  border: 1px solid #a47a35;
+  text-align: center;
+}
+
+.official-card-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 0.72;
+  object-fit: contain;
+}
+
+.official-card-item p {
+  margin: 10px 0 0;
+  color: #38251a;
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+
+  .card-search-panel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .official-card-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+
+  .card-search-panel {
+    grid-template-columns: 1fr;
+  }
+
+  .official-card-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 10px;
+  }
+
+  .official-card-item {
+    padding: 7px;
+  }
+}
+
+
+/* カード検索欄 */
+
+.card-search-panel {
+  grid-template-columns:
+    2fr repeat(4, minmax(0, 1fr)) auto;
+}
+
+/* カード情報 */
+
+.official-card-info {
+  margin-top: 5px !important;
+  font-size: 11px !important;
+  color: #8c6329 !important;
+}
+
+/* タブレット */
+
+@media (max-width: 900px) {
+  .card-search-panel {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* スマートフォン */
+
+@media (max-width: 600px) {
+  .card-search-panel {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ========================================
+   EVENT PAGE
+======================================== */
+
+.event-container {
+  width: min(100% - 40px, 1000px);
+  margin: 0 auto;
+  padding: 65px 0 100px;
+}
+
+.event-section {
+  margin-bottom: 75px;
+  text-align: center;
+}
+
+.event-section h2 {
+  margin: 0;
+  color: #4b3020;
+  font-size: 28px;
+  letter-spacing: 0.08em;
+}
+
+.event-section-en {
+  margin: 10px 0 30px;
+  color: #9a753d;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+}
+
+.event-empty {
+  padding: 55px 25px;
+  border: 1px solid #b59a69;
+  background: #fffaf0;
+  box-shadow: 0 4px 15px rgba(50, 30, 10, 0.06);
+  color: #654d37;
+  line-height: 2;
+}
+
+.event-symbol {
+  margin-bottom: 18px;
+  color: #ae8744;
+  font-size: 30px;
+}
+
+.event-empty-title {
+  font-size: 17px;
+  font-weight: bold;
+  color: #4b3020;
+}
+
+@media (max-width: 600px) {
+
+  .event-container {
+    width: calc(100% - 28px);
+    padding: 40px 0 65px;
+  }
+
+  .event-section {
+    margin-bottom: 50px;
+  }
+
+  .event-section h2 {
+    font-size: 22px;
+  }
+
+  .event-empty {
+    padding: 35px 15px;
+  }
+
+  .event-empty-title {
+    font-size: 15px;
+  }
+}
+
+
+/* ========================================
+   SHOP PAGE
+======================================== */
+
+.shop-container {
+  width: min(100% - 40px, 1000px);
+  margin: 0 auto;
+  padding: 65px 0 100px;
+}
+
+.shop-section {
+  margin-bottom: 80px;
+}
+
+.shop-section > h2 {
+  margin: 0;
+  color: #4b3020;
+  font-size: 28px;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.shop-section-en {
+  margin: 10px 0 35px;
+  color: #9a753d;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+
+/* 商品カード */
+
+.shop-product {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 35px;
+  padding: 30px;
+  background: #fffaf0;
+  border: 1px solid #b59a69;
+  box-shadow: 0 4px 15px rgba(50, 30, 10, 0.06);
+}
+
+.shop-product-image {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #e9dfca;
+  border: 1px solid #c9b58d;
+  color: #92784e;
+}
+
+.shop-product-image span {
+  font-size: 50px;
+}
+
+.shop-product-image p {
+  font-size: 11px;
+  letter-spacing: 0.15em;
+}
+
+.shop-product-info {
+  padding: 15px 0;
+}
+
+.shop-product-brand {
+  color: #9a753d;
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+
+.shop-product-info h3 {
+  margin: 15px 0;
+  color: #4b3020;
+  font-size: 26px;
+}
+
+.shop-status {
+  display: inline-block;
+  padding: 6px 16px;
+  background: #e8dfcd;
+  border: 1px solid #b9a47d;
+  color: #69553a;
+  font-size: 12px;
+}
+
+.shop-description {
+  margin-top: 25px;
+  color: #654d37;
+  line-height: 2;
+}
+
+
+/* 購入案内 */
+
+.shop-information {
+  padding: 55px 25px;
+  background: #fffaf0;
+  border: 1px solid #b59a69;
+  text-align: center;
+  color: #654d37;
+  line-height: 2;
+}
+
+.shop-information-symbol {
+  color: #ae8744;
+  font-size: 30px;
+}
+
+.shop-information h3 {
+  margin: 15px 0;
+  color: #4b3020;
+  font-size: 20px;
+}
+
+
+/* スマートフォン */
+
+@media (max-width: 700px) {
+
+  .shop-container {
+    width: calc(100% - 28px);
+    padding: 40px 0 65px;
+  }
+
+  .shop-section {
+    margin-bottom: 55px;
+  }
+
+  .shop-section > h2 {
+    font-size: 22px;
+  }
+
+  .shop-product {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 18px;
+  }
+
+  .shop-product-image {
+    min-height: 230px;
+  }
+
+  .shop-product-info h3 {
+    font-size: 22px;
+  }
+
+  .shop-information {
+    padding: 35px 15px;
+  }
+
+}
+
+
+/* ========================================
+   PLAY PAGE
+======================================== */
+
+.play-container {
+  width: min(100% - 40px, 1000px);
+  margin: 0 auto;
+  padding: 65px 0 100px;
+}
+
+.play-section {
+  margin-bottom: 80px;
+}
+
+.play-section > h2 {
+  margin: 0;
+  color: #4b3020;
+  font-size: 28px;
+  letter-spacing: 0.08em;
+  text-align: center;
+}
+
+.play-section-en {
+  margin: 10px 0 35px;
+  color: #9a753d;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+
+/* WEB版紹介 */
+
+.play-web-panel {
+  padding: 55px 30px;
+  background: #fffaf0;
+  border: 1px solid #b59a69;
+  box-shadow: 0 4px 15px rgba(50, 30, 10, 0.06);
+  text-align: center;
+}
+
+.play-web-symbol {
+  font-size: 40px;
+  color: #ae8744;
+  margin-bottom: 15px;
+}
+
+.play-web-panel h3 {
+  margin: 0 0 25px;
+  font-size: 25px;
+  letter-spacing: 0.08em;
+  color: #4b3020;
+}
+
+.play-web-description {
+  max-width: 650px;
+  margin: 0 auto 35px;
+  color: #654d37;
+  line-height: 2;
+}
+
+.play-web-button {
+  display: inline-block;
+  padding: 16px 45px;
+  background: #4b3020;
+  border: 1px solid #9a753d;
+  color: #fffaf0;
+  text-decoration: none;
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  transition: background 0.2s;
+}
+
+.play-web-button:hover {
+  background: #735034;
+}
+
+.play-web-button[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.play-web-note {
+  margin-top: 15px;
+  font-size: 12px;
+  color: #92784e;
+}
+
+
+/* 関連ページ */
+
+.play-guide-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 25px;
+}
+
+.play-guide-card {
+  display: block;
+  padding: 35px 25px;
+  background: #fffaf0;
+  border: 1px solid #b59a69;
+  color: #654d37;
+  text-decoration: none;
+  text-align: center;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.play-guide-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(50, 30, 10, 0.12);
+}
+
+.play-guide-symbol {
+  font-size: 28px;
+  color: #ae8744;
+}
+
+.play-guide-card h3 {
+  margin: 12px 0;
+  font-size: 20px;
+  color: #4b3020;
+}
+
+.play-guide-card p {
+  line-height: 1.9;
+}
+
+.play-guide-card span {
+  display: block;
+  margin-top: 20px;
+  font-size: 12px;
+  letter-spacing: 0.15em;
+  color: #9a753d;
+}
+
+
+/* スマートフォン */
+
+@media (max-width: 700px) {
+
+  .play-container {
+    width: calc(100% - 28px);
+    padding: 40px 0 65px;
+  }
+
+  .play-section {
+    margin-bottom: 55px;
+  }
+
+  .play-section > h2 {
+    font-size: 22px;
+  }
+
+  .play-web-panel {
+    padding: 35px 18px;
+  }
+
+  .play-web-panel h3 {
+    font-size: 19px;
+  }
+
+  .play-web-button {
+    padding: 15px 24px;
+    font-size: 14px;
+  }
+
+  .play-guide-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .play-guide-card {
+    padding: 25px 18px;
+  }
+
+}
+
+
+/* ========================================
+   STEP 14-2
+   スマートフォン表示の最終調整
+======================================== */
+
+/* 画面幅を超える画像を防止 */
+
+img {
+    max-width: 100%;
+}
+
+/* ヘッダー内の要素のはみ出し防止 */
+
+.site-brand {
+    min-width: 0;
+}
+
+.site-brand span:last-child {
+    overflow-wrap: anywhere;
+}
+
+/* スマートフォン・タブレット */
+
+@media (max-width: 900px) {
+
+    .header-inner {
+        gap: 10px;
+    }
+
+    .site-brand {
+        flex: 1;
+        min-width: 0;
+        line-height: 1.4;
+    }
+
+    .menu-toggle {
+        flex-shrink: 0;
+        min-width: 45px;
+        min-height: 44px;
+    }
+
+    /* 開いたメニューを画面内に収める */
+
+    .site-nav {
+        max-height: calc(100vh - 65px);
+        max-height: calc(100dvh - 65px);
+        overflow-y: auto;
+        overscroll-behavior: contain;
+    }
+
+    /* メニュー項目を押しやすくする */
+
+    .site-nav a {
+        display: flex;
+        align-items: center;
+        min-height: 44px;
+        padding: 10px 15px;
+    }
+
+}
+
+/* 小さいスマートフォン */
+
+@media (max-width: 380px) {
+
+    .header-inner {
+        padding: 0 10px;
+    }
+
+    .site-brand {
+        font-size: 11px;
+        letter-spacing: 0;
+    }
+
+    .hero-description {
+        font-size: 13px;
+    }
+
+    .official-card-grid {
+        gap: 8px;
+    }
+
+    .official-card-item {
+        padding: 5px;
+    }
+
+    .official-card-item p {
+        font-size: 12px;
+        overflow-wrap: anywhere;
+    }
+
+}
+
+/* キーボード操作時の視認性 */
+
+.site-nav a:focus-visible,
+.menu-toggle:focus-visible,
+.button:focus-visible {
+    outline: 2px solid var(--gold-light);
+    outline-offset: 3px;
+}
+
+
+/* ========================================
+   STEP 14-3
+   CARD LIST / RULE スマホ調整
+======================================== */
+
+/* ----------------------------------------
+   CARD LIST
+---------------------------------------- */
+
+.official-card-grid {
+    width: 100%;
+    min-width: 0;
+}
+
+.official-card-item {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.official-card-item img {
+    max-width: 100%;
+    height: auto;
+}
+
+.official-card-item p {
+    overflow-wrap: anywhere;
+}
+
+/* 検索欄 */
+
+.card-search-panel {
+    width: 100%;
+    min-width: 0;
+}
+
+.card-search-panel input,
+.card-search-panel select,
+.card-search-panel button {
+    max-width: 100%;
+    min-height: 44px;
+}
+
+/* ----------------------------------------
+   RULE
+---------------------------------------- */
+
+.rule-paper,
+.rule-toc,
+.rule-card,
+.rule-info {
+    min-width: 0;
+}
+
+.rule-paper img,
+.rule-card img {
+    max-width: 100%;
+}
+
+/* ----------------------------------------
+   スマートフォン
+---------------------------------------- */
+
+@media (max-width: 600px) {
+
+    /* CARD LIST */
+
+    .official-card-grid {
+        grid-template-columns:
+            repeat(2, minmax(0, 1fr));
+
+        gap: 10px;
+    }
+
+    .official-card-item {
+        padding: 6px;
+    }
+
+    .official-card-item p {
+        font-size: 12px;
+        line-height: 1.5;
+    }
+
+    .official-card-info {
+        font-size: 10px !important;
+    }
+
+    .card-search-panel {
+        grid-template-columns: 1fr;
+        gap: 10px;
+        padding: 14px;
+    }
+
+    .card-search-panel input,
+    .card-search-panel select {
+        width: 100%;
+        font-size: 16px;
+    }
+
+    .card-search-panel button {
+        width: 100%;
+        font-size: 15px;
+    }
+
+    /* RULE */
+
+    .rule-paper {
+        padding: 24px 16px;
+        overflow-wrap: anywhere;
+    }
+
+    .rule-heading {
+        gap: 8px;
+        font-size: 22px;
+    }
+
+    .rule-heading span {
+        font-size: 25px;
+    }
+
+    .rule-paper h3 {
+        font-size: 18px;
+    }
+
+    .rule-paper p,
+    .rule-paper li {
+        line-height: 1.9;
+    }
+
+    .rule-toc {
+        padding: 18px 14px;
+    }
+
+    .rule-card {
+        padding: 18px 14px;
+    }
+
+    .rule-info {
+        padding: 20px 16px;
+    }
+
+}

@@ -1,0 +1,253 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+  <meta charset="UTF-8">
+
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>ゲームを遊ぶ | Elementis Summoner</title>
+
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="./script.js" defer></script>
+
+</head>
+
+<body>
+
+<header class="site-header">
+
+  <div class="header-inner">
+
+    <a class="site-brand" href="./index.html">
+      ✦ ELEMENTIS SUMMONER
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="メニューを開く"
+      aria-controls="site-nav"
+      aria-expanded="false">
+      ☰
+    </button>
+
+
+<nav id="site-nav" class="site-nav" aria-label="メインメニュー">
+
+  <a href="./index.html#home">HOME</a>
+  <a href="./index.html#about">ABOUT</a>
+  <a href="./rules.html">RULE</a>
+  <a href="./cards.html">CARD LIST</a>
+  <a href="./event.html">EVENT</a>
+  <a href="./shop.html">SHOP</a>
+  <a href="./play.html">PLAY</a>
+
+</nav>
+
+
+  </div>
+
+</header>
+
+
+<main>
+
+  <!-- ページタイトル -->
+
+  <section class="rule-hero">
+
+    <span class="section-en">
+      ELEMENTIS SUMMONER WEB
+    </span>
+
+    <h1>ゲームを遊ぶ</h1>
+
+    <p>PLAY</p>
+
+    <div class="heading-line">✦</div>
+
+  </section>
+
+
+  <div class="play-container">
+
+    <!-- WEB版紹介 -->
+
+    <section class="play-section">
+
+      <h2>WEB版</h2>
+
+      <p class="play-section-en">
+        PLAY ON WEB
+      </p>
+
+      <div class="play-web-panel">
+
+        <div class="play-web-symbol">
+          ✦
+        </div>
+
+        <h3>ELEMENTIS SUMMONER WEB</h3>
+
+        <p class="play-web-description">
+
+          Elementis Summonerを
+          ブラウザで楽しめるWEB版です。
+
+          <br><br>
+
+          デッキの構築やカードバトルなど、
+          WEB上でゲームを楽しめます。
+
+        </p>
+
+        <!--
+          WEB版の公開URLが確定したら
+          下の href を変更してください。
+        -->
+
+        <a
+          id="web-play-link"
+          class="play-web-button"
+          href="#"
+          aria-disabled="true">
+
+          WEB版をプレイする
+
+        </a>
+
+        <p id="web-play-note" class="play-web-note">
+          WEB版へのリンクは準備中です。
+        </p>
+
+      </div>
+
+    </section>
+
+
+    <!-- 関連ページ -->
+
+    <section class="play-section">
+
+      <h2>はじめて遊ぶ方へ</h2>
+
+      <p class="play-section-en">
+        GETTING STARTED
+      </p>
+
+      <div class="play-guide-grid">
+
+        <a
+          href="./rules.html"
+          class="play-guide-card">
+
+          <div class="play-guide-symbol">
+            ✦
+          </div>
+
+          <h3>ルールを確認する</h3>
+
+          <p>
+            ゲームの基本ルールや
+            カードの使い方を確認できます。
+          </p>
+
+          <span>RULE</span>
+
+        </a>
+
+
+        <a
+          href="./cards.html"
+          class="play-guide-card">
+
+          <div class="play-guide-symbol">
+            ✦
+          </div>
+
+          <h3>カードを確認する</h3>
+
+          <p>
+            カード一覧から属性や種類、
+            コストでカードを探せます。
+          </p>
+
+          <span>CARD LIST</span>
+
+        </a>
+
+      </div>
+
+    </section>
+
+  </div>
+
+</main>
+
+
+<footer class="site-footer">
+
+  <p class="footer-title">
+    ELEMENTIS SUMMONER
+  </p>
+
+  <p>Original Fantasy Card Game</p>
+
+  <p class="copyright">
+
+    &copy;
+    <span id="current-year"></span>
+    Elementis Summoner
+
+  </p>
+
+</footer>
+
+
+<script>
+
+  // ====================================
+  // WEB版アクセス先
+  // ====================================
+
+  const WEB_GAME_URL = "https://parfekutonegy.github.io/elementis-summoner";
+
+  const webPlayLink =
+    document.getElementById("web-play-link");
+
+  const webPlayNote =
+    document.getElementById("web-play-note");
+
+  if (WEB_GAME_URL.trim()) {
+
+    webPlayLink.href = WEB_GAME_URL;
+
+    webPlayLink.removeAttribute("aria-disabled");
+
+    webPlayLink.target = "_blank";
+
+    webPlayLink.rel = "noopener noreferrer";
+
+    webPlayNote.textContent =
+      "別タブでWEB版を開きます。";
+
+  } else {
+
+    webPlayLink.addEventListener(
+      "click",
+      function(event) {
+        event.preventDefault();
+      }
+    );
+
+  }
+
+</script>
+
+</body>
+</html>

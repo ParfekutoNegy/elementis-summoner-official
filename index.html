@@ -1,0 +1,376 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Elementis Summoner | 公式サイト</title>
+  <meta name="description" content="オリジナルカードゲーム Elementis Summoner（エレメンティスサモナー）の公式サイト。ゲーム紹介、遊び方、カードリスト、イベント情報など。">
+
+  <link rel="stylesheet" href="./style.css">
+  <script src="./script.js" defer></script>
+</head>
+
+<body>
+
+  <!-- ヘッダー -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="site-brand" href="#home">
+        <span class="brand-mark">✦</span>
+        <span>ELEMENTIS SUMMONER</span>
+      </a>
+
+      <button class="menu-toggle"
+              type="button"
+              aria-label="メニューを開く"
+              aria-expanded="false"
+              aria-controls="site-nav">
+        ☰
+      </button>
+
+
+
+<nav id="site-nav" class="site-nav" aria-label="メインメニュー">
+
+  <a href="./index.html#home">HOME</a>
+  <a href="./index.html#about">ABOUT</a>
+  <a href="./rules.html">RULE</a>
+  <a href="./cards.html">CARD LIST</a>
+  <a href="./event.html">EVENT</a>
+  <a href="./shop.html">SHOP</a>
+  <a href="./play.html">PLAY</a>
+
+</nav>
+
+
+    </div>
+  </header>
+
+  <main>
+
+    <!-- メインビジュアル -->
+    <section id="home" class="hero">
+      <div class="hero-ornament">✦ ELEMENTIS SUMMONER ✦</div>
+
+      <p class="hero-subtitle">ORIGINAL FANTASY CARD GAME</p>
+
+
+
+<div class="hero-title-area">
+
+  <div class="hero-title-decoration">
+    ◆ ───── ✦ ───── ◆
+  </div>
+
+  <h1 class="hero-main-title">
+    ELEMENTIS
+    <span>SUMMONER</span>
+  </h1>
+
+  <p class="hero-title-jp">
+    エレメンティスサモナー
+  </p>
+
+  <div class="hero-title-decoration">
+    ◆ ───── ✦ ───── ◆
+  </div>
+
+</div>
+
+
+<div class="hero-cards">
+
+  <!-- 左：マギア -->
+  <img
+    src="./images/card-magia.jpg"
+    alt="マギアカード"
+    class="hero-card hero-card-left"
+  >
+
+  <!-- 中央：サモン -->
+  <img
+    src="./images/card-summon.jpg"
+    alt="サモンカード"
+    class="hero-card hero-card-center"
+  >
+
+  <!-- 右：レジスト -->
+  <img
+    src="./images/card-resist.jpg"
+    alt="レジストカード"
+    class="hero-card hero-card-right"
+  >
+
+</div>
+
+
+
+      <div class="hero-divider">◆ ───── ✦ ───── ◆</div>
+
+      <p class="hero-description">
+        召喚と魔法が織りなす、戦略のカードバトル。<br>
+        10枚のカードに、勝利への可能性を込めて。
+      </p>
+
+      <a href="#about" class="button button-primary">
+        ゲームの世界へ
+      </a>
+    </section>
+
+    <!-- ゲーム紹介 -->
+    <section id="about" class="section">
+      <div class="section-heading">
+        <span class="section-en">ABOUT THE GAME</span>
+        <h2>Elementis Summonerとは</h2>
+        <div class="heading-line">✦</div>
+      </div>
+
+      <div class="paper-panel">
+        <p>
+          Elementis Summoner（エレメンティスサモナー）は、
+          サモン・マギア・レジストの3種類のカードを駆使して
+          対戦するオリジナルカードゲームです。
+        </p>
+
+        <p>
+          10枚のカードを使い、相手のライフを0にすることで
+          ゲームに勝利します。
+          先に2勝したプレイヤーがマッチの勝者となります。
+        </p>
+      </div>
+    </section>
+
+    <!-- カードの種類 -->
+    <section id="cards" class="section section-alt">
+      <div class="section-heading">
+        <span class="section-en">CARD TYPES</span>
+        <h2>3種類のカード</h2>
+        <div class="heading-line">✦</div>
+      </div>
+
+
+<div class="card-grid">
+
+  <!-- サモン -->
+  <article class="feature-card">
+
+    <div class="feature-card-image">
+      <img
+        src="./images/card-summon.jpg"
+        alt="サモンカード"
+        loading="lazy"
+      >
+    </div>
+
+    <h3>SUMMON</h3>
+    <p class="feature-jp">サモン</p>
+
+    <p class="feature-description">
+      場に召喚して戦うカード。
+      攻撃やブロック、固有の能力を使って
+      バトルを有利に進めます。
+    </p>
+
+  </article>
+
+  <!-- マギア -->
+  <article class="feature-card">
+
+    <div class="feature-card-image">
+      <img
+        src="./images/card-magia.jpg"
+        alt="マギアカード"
+        loading="lazy"
+      >
+    </div>
+
+    <h3>MAGIA</h3>
+    <p class="feature-jp">マギア</p>
+
+    <p class="feature-description">
+      魔法の力でさまざまな効果を発揮するカード。
+      ダメージや強化などで戦況を変えます。
+    </p>
+
+  </article>
+
+  <!-- レジスト -->
+  <article class="feature-card">
+
+    <div class="feature-card-image">
+      <img
+        src="./images/card-resist.jpg"
+        alt="レジストカード"
+        loading="lazy"
+      >
+    </div>
+
+    <h3>RESIST</h3>
+    <p class="feature-jp">レジスト</p>
+
+    <p class="feature-description">
+      相手ターンに条件を満たすことで使用できるカード。
+      相手の行動に対応し、戦略を広げます。
+    </p>
+
+  </article>
+
+</div>
+
+    </section>
+
+    <!-- 遊び方 -->
+    <section id="rules" class="section">
+      <div class="section-heading">
+        <span class="section-en">HOW TO PLAY</span>
+        <h2>遊び方</h2>
+        <div class="heading-line">✦</div>
+      </div>
+
+      <div class="paper-panel center">
+        <h3>10枚のカードから始まる戦略</h3>
+        <p>
+          カードの使い方、ターンの進行、攻撃とブロックなど、
+          Elementis Summonerの基本ルールを紹介します。
+        </p>
+
+<a class="button button-outline" href="./rules.html">
+  詳しい遊び方を見る
+</a>
+      </div>
+    </section>
+
+    <!-- イベント -->
+
+<!-- イベント -->
+
+<section id="events" class="section section-alt">
+
+  <div class="section-heading">
+
+    <span class="section-en">
+      EVENT INFORMATION
+    </span>
+
+    <h2>イベント情報</h2>
+
+    <div class="heading-line">✦</div>
+
+  </div>
+
+  <div class="paper-panel center">
+
+    <p>
+      大会や体験会などのイベント情報を
+      こちらに掲載していきます。
+    </p>
+
+    <a
+      class="button button-outline"
+      href="./event.html">
+
+      イベント情報を見る
+
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- ショップ -->
+
+<section id="shop" class="section">
+
+  <div class="section-heading">
+
+    <span class="section-en">
+      SHOP INFORMATION
+    </span>
+
+    <h2>商品・取扱店舗</h2>
+
+    <div class="heading-line">✦</div>
+
+  </div>
+
+  <div class="paper-panel center">
+
+    <p>
+      Elementis Summonerの商品情報や
+      取扱店舗を紹介するページです。
+    </p>
+
+    <a
+      class="button button-outline"
+      href="./shop.html">
+
+      商品情報を見る
+
+    </a>
+
+  </div>
+
+</section>
+
+
+
+<!-- プレイ -->
+
+<section id="play" class="section section-play">
+
+  <div class="section-heading">
+
+    <span class="section-en">
+      LET'S PLAY
+    </span>
+
+    <h2>ゲームを楽しもう</h2>
+
+    <div class="heading-line">✦</div>
+
+  </div>
+
+  <div class="paper-panel center">
+
+    <h3>ELEMENTIS SUMMONER WEB</h3>
+
+    <p>
+      Elementis Summonerを
+      ブラウザで楽しもう。
+    </p>
+
+    <p>
+      WEB版ではデッキ構築や
+      カードバトルを楽しめます。
+    </p>
+
+    <a
+      class="button button-primary"
+      href="./play.html">
+
+      WEB版はこちら
+
+    </a>
+
+  </div>
+
+</section>
+
+
+  </main>
+
+  <footer class="site-footer">
+    <p class="footer-title">ELEMENTIS SUMMONER</p>
+    <p>Original Fantasy Card Game</p>
+    <p class="copyright">
+      &copy; <span id="current-year"></span>
+      Elementis Summoner
+    </p>
+  </footer>
+
+</body>
+</html>

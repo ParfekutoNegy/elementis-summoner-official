@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <title>カード一覧 | Elementis Summoner</title>
+
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="./script.js" defer></script>
+  <script src="./data/cards.js" defer></script>
+  <script src="./cards-page.js" defer></script>
+</head>
+
+<body>
+
+<header class="site-header">
+  <div class="header-inner">
+
+    <a class="site-brand" href="./index.html">
+      ✦ ELEMENTIS SUMMONER
+    </a>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-label="メニューを開く"
+      aria-controls="site-nav"
+      aria-expanded="false">
+      ☰
+    </button>
+
+
+
+<nav id="site-nav" class="site-nav" aria-label="メインメニュー">
+
+  <a href="./index.html#home">HOME</a>
+  <a href="./index.html#about">ABOUT</a>
+  <a href="./rules.html">RULE</a>
+  <a href="./cards.html">CARD LIST</a>
+  <a href="./event.html">EVENT</a>
+  <a href="./shop.html">SHOP</a>
+  <a href="./play.html">PLAY</a>
+
+</nav>
+
+
+
+  </div>
+</header>
+
+<main>
+
+  <section class="rule-hero">
+    <span class="section-en">OFFICIAL CARD DATABASE</span>
+    <h1>カード一覧</h1>
+    <p>CARD LIST</p>
+    <div class="heading-line">✦</div>
+  </section>
+
+  <section class="section">
+    <div class="rule-container">
+
+      <div class="card-search-panel">
+
+        <input
+          type="search"
+          id="card-keyword"
+          placeholder="カード名で検索"
+          aria-label="カード名で検索"
+        >
+
+        <select id="card-element"
+                aria-label="属性">
+          <option value="">すべての属性</option>
+        </select>
+
+        <select id="card-type"
+                aria-label="カードの種類">
+          <option value="">すべての種類</option>
+        </select>
+
+        <select id="card-cost"
+                aria-label="コスト">
+          <option value="">すべてのコスト</option>
+        </select>
+
+        <select id="card-series" aria-label="シリーズ">
+  <option value="">すべてのシリーズ</option>
+  <option value="basic">BASIC</option>
+  <option value="folklore">FOLKLORE</option>
+  <option value="mythology">MYTHOLOGY</option>
+  <option value="promo">PROMO</option>
+</select>
+
+
+        <button type="button" id="card-reset">
+          条件をクリア
+        </button>
+
+      </div>
+
+      <p id="card-count" class="card-result-count"
+         aria-live="polite"></p>
+
+      <div id="card-list" class="official-card-grid">
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p class="footer-title">ELEMENTIS SUMMONER</p>
+  <p>Original Fantasy Card Game</p>
+  <p class="copyright">
+    &copy; <span id="current-year"></span>
+    Elementis Summoner
+  </p>
+</footer>
+
+</body>
+</html>
