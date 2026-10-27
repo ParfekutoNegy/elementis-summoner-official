@@ -36,19 +36,22 @@
       ☰
     </button>
 
+    <nav id="site-nav"
+         class="site-nav"
+         aria-label="メインメニュー">
 
-<nav id="site-nav" class="site-nav" aria-label="メインメニュー">
+      <a href="./index.html#home">HOME</a>
+      <a href="./index.html#about">ABOUT</a>
 
-  <a href="./index.html#home">HOME</a>
-  <a href="./index.html#about">ABOUT</a>
-  <a href="./rules.html">RULE</a>
-  <a href="./cards.html">CARD LIST</a>
-  <a href="./event.html">EVENT</a>
-  <a href="./shop.html">SHOP</a>
-  <a href="./play.html">PLAY</a>
+<a href="./rules.html">RULE</a>
+<a href="./faq.html">Q&A</a>
+<a href="./cards.html">CARD LIST</a>
 
-</nav>
+      <a href="./event.html">EVENT</a>
+      <a href="./shop.html">SHOP</a>
+      <a href="./play.html">PLAY</a>
 
+    </nav>
 
   </div>
 
@@ -57,7 +60,9 @@
 
 <main>
 
-  <!-- ページタイトル -->
+  <!-- =====================================
+       ページタイトル
+  ====================================== -->
 
   <section class="rule-hero">
 
@@ -76,99 +81,203 @@
 
   <div class="shop-container">
 
-    <!-- 商品ラインナップ -->
+
+    <!-- =====================================
+         オンラインショップ
+    ====================================== -->
 
     <section class="shop-section">
 
-      <h2>商品ラインナップ</h2>
+      <h2>オンラインショップ</h2>
 
       <p class="shop-section-en">
-        PRODUCT LINEUP
+        ONLINE SHOP
       </p>
 
-
-      <article class="shop-product">
-
-        <div class="shop-product-image">
-
-          <span>✦</span>
-
-          <p>PRODUCT IMAGE</p>
-
-        </div>
+      <article class="shop-sales-card">
 
 
-        <div class="shop-product-info">
+        <h3 class="shop-sales-title">
+          Negy Online Shop
+        </h3>
 
-          <p class="shop-product-brand">
-            ELEMENTIS SUMMONER
-          </p>
+        <p class="shop-sales-description">
+          Elementis Summonerの関連商品を<br>
+          オンラインショップで販売しています。
+        </p>
 
-          <h3>商品情報</h3>
+        <a
+          class="shop-sales-button"
+          href="https://negy.base.shop/"
+          target="_blank"
+          rel="noopener noreferrer">
 
-          <span class="shop-status">
-            準備中
-          </span>
+          オンラインショップを見る
+          <span aria-hidden="true">↗</span>
 
-          <p class="shop-description">
-
-            商品ラインナップや販売に関する情報は、
-            決まり次第こちらでお知らせします。
-
-          </p>
-
-        </div>
+        </a>
 
       </article>
 
     </section>
 
 
-    <!-- 購入案内 -->
+    <!-- =====================================
+         取扱店舗
+    ====================================== -->
 
     <section class="shop-section">
 
-      <h2>購入について</h2>
+      <h2>取扱店舗</h2>
 
       <p class="shop-section-en">
-        HOW TO BUY
+        RETAIL STORES
       </p>
 
-      <div class="shop-information">
 
-        <div class="shop-information-symbol">
+      <article class="shop-store-card">
+
+        <div class="shop-store-header">
+
+          <span class="shop-store-label">
+            取扱店舗
+          </span>
+
+          <span class="shop-store-region">
+            WAKAYAMA
+          </span>
+
+        </div>
+
+
+        <h3 class="shop-store-title">
+          Drop Gear
+        </h3>
+
+        <div class="shop-store-divider">
           ✦
         </div>
 
-        <h3>販売情報は準備中です</h3>
 
-        <p>
-          販売方法や取扱店舗などの情報は、<br>
-          決まり次第こちらでお知らせします。
-        </p>
+        <div class="shop-store-details">
 
-      </div>
+          <div class="shop-store-row">
+
+            <span class="shop-store-item-label">
+              所在地
+            </span>
+
+            <span class="shop-store-item-value">
+              和歌山県和歌山市元寺町1丁目64
+            </span>
+
+          </div>
+
+
+          <div class="shop-store-row">
+
+            <span class="shop-store-item-label">
+              営業時間
+            </span>
+
+            <span class="shop-store-item-value">
+              19:00〜25:00<br>
+              年中無休
+            </span>
+
+          </div>
+
+        </div>
+
+
+        <div class="shop-store-notes">
+
+          <p>
+            ※営業時間は都合により変更される場合や、
+            臨時休業となる場合があります。
+          </p>
+
+          <p>
+            最新の営業状況はオープンチャット
+            「Drop Gear 和歌山サブカルカフェ」
+            にてご確認ください。
+          </p>
+
+        </div>
+
+        
+<!-- =====================================
+     Drop Gear 営業情報QRコード
+====================================== -->
+
+<div class="shop-store-qr">
+
+    <h4>
+        営業情報はこちら
+    </h4>
+
+    <p>
+        オープンチャット<br>
+        「Drop Gear 和歌山サブカルカフェ」
+    </p>
+
+    <div class="shop-store-qr-image">
+
+        <img
+            src="./images/dropgear-qr.png"
+            alt="Drop Gear 和歌山サブカルカフェのオープンチャットQRコード"
+            loading="lazy">
+
+    </div>
+
+    <p class="shop-store-qr-guide">
+        スマートフォンのカメラなどで<br>
+        QRコードを読み取ってください。
+    </p>
+
+</div>
+
+
+
+        <a
+          class="shop-store-map-button"
+          href="https://www.google.com/maps/search/?api=1&amp;query=%E5%92%8C%E6%AD%8C%E5%B1%B1%E5%B8%82%E5%85%83%E5%AF%BA%E7%94%BA1%E4%B8%81%E7%9B%AE64"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          Googleマップで場所を確認
+          <span aria-hidden="true">↗</span>
+
+        </a>
+
+      </article>
 
     </section>
+
 
   </div>
 
 </main>
 
 
+<!-- =====================================
+     フッター
+====================================== -->
+
 <footer class="site-footer">
 
-    <p class="footer-title">
-        ELEMENTIS SUMMONER
-    </p>
+  <p class="footer-title">
+    ELEMENTIS SUMMONER
+  </p>
 
-    <p class="copyright">
-        <span>© 2024 Negy</span>
-        <span class="copyright-separator">|</span>
-        <span>Illust. Adobe Firefly</span>
-    </p>
+  <p class="copyright">
+    <span>© 2024 Negy</span>
+    <span class="copyright-separator">|</span>
+    <span>Illust. Adobe Firefly</span>
+  </p>
 
 </footer>
 
 </body>
 </html>
+

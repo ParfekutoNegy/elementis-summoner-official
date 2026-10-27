@@ -2052,3 +2052,1702 @@ img {
     font-size: 12px;
 
 }
+
+
+/* ==========================================
+   EVENT PAGE
+   過去のイベントカード
+========================================== */
+
+.event-card {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 760px;
+
+    margin: 30px auto 0;
+    padding: 32px 36px;
+
+    background:
+        linear-gradient(
+            145deg,
+            #27241e 0%,
+            #1b1a18 60%,
+            #151513 100%
+        );
+
+    border: 1px solid #776447;
+    border-radius: 4px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.25),
+        inset 0 0 25px rgba(0,0,0,0.2);
+
+}
+
+
+/* ==========================================
+   ヘッダー
+========================================== */
+
+.event-card-header {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+}
+
+
+/* 開催終了バッジ */
+
+.event-status {
+
+    display: inline-block;
+
+    padding: 5px 12px;
+
+    font-size: 12px;
+    letter-spacing: 1px;
+
+    border: 1px solid #81704f;
+    border-radius: 3px;
+
+}
+
+.event-status-ended {
+
+    color: #bcae91;
+
+    background: rgba(
+        129,112,79,0.12
+    );
+
+}
+
+
+/* 日付 */
+
+.event-card-date {
+
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+    letter-spacing: 1.5px;
+
+    color: #bba77f;
+
+}
+
+
+/* ==========================================
+   イベントタイトル
+========================================== */
+
+.event-card-title {
+
+    margin: 0;
+
+    text-align: center;
+
+    font-size: 25px;
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+    color: #e0c997;
+
+}
+
+
+/* 装飾区切り */
+
+.event-card-divider {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 16px;
+
+    margin: 24px 0;
+
+    color: #9e865c;
+
+    font-size: 14px;
+
+}
+
+.event-card-divider::before,
+.event-card-divider::after {
+
+    content: "";
+
+    display: block;
+
+    flex: 1;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #756347,
+        transparent
+    );
+
+}
+
+
+/* ==========================================
+   開催情報
+========================================== */
+
+.event-card-details {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 17px;
+
+}
+
+.event-detail-row {
+
+    display: grid;
+
+    grid-template-columns:
+        100px minmax(0, 1fr);
+
+    gap: 18px;
+
+    align-items: start;
+
+    text-align: left;
+
+}
+
+.event-detail-label {
+
+    color: #bca477;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+}
+
+/* ==========================================
+   イベント詳細の内容を左揃え
+========================================== */
+
+.event-detail-value {
+
+    color: #ded5c4;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    text-align: left;
+
+    display: block;
+
+    min-width: 0;
+
+}
+
+
+/* ==========================================
+   イベント説明
+========================================== */
+
+.event-card-description {
+
+    margin-top: 26px;
+    padding-top: 22px;
+
+    border-top: 1px solid
+        rgba(129,112,79,0.35);
+
+}
+
+.event-card-description p {
+
+    margin: 0 0 12px;
+
+    color: #c8beac;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+}
+
+.event-card-description p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* ==========================================
+   開催終了フッター
+========================================== */
+
+.event-card-footer {
+
+    margin-top: 26px;
+    padding-top: 18px;
+
+    border-top: 1px solid
+        rgba(129,112,79,0.35);
+
+    text-align: center;
+
+    color: #a89a82;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* ==========================================
+   スマートフォン対応
+========================================== */
+
+@media (max-width: 600px) {
+
+    .event-card {
+
+        padding: 24px 18px;
+
+        margin-top: 22px;
+
+    }
+
+    .event-card-title {
+
+        font-size: 21px;
+
+        letter-spacing: 1px;
+
+    }
+
+    .event-card-header {
+
+        gap: 8px;
+
+    }
+
+    .event-card-date {
+
+        font-size: 11px;
+
+        letter-spacing: 0.5px;
+
+    }
+
+
+
+    .event-detail-label {
+
+        font-size: 13px;
+
+    }
+
+
+    .event-card-description p {
+
+        font-size: 13px;
+
+    }
+
+}
+
+.event-card-description {
+
+    margin-top: 26px;
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(129,112,79,0.35);
+
+    text-align: left;
+
+}
+
+.event-card-description p {
+
+    text-align: left;
+
+}
+
+
+/* ==========================================
+   SHOP PAGE
+   販売方法・取扱店舗
+========================================== */
+
+
+/* ==========================================
+   共通カード
+========================================== */
+
+.shop-sales-card,
+.shop-store-card {
+
+    position: relative;
+
+    width: 100%;
+    max-width: 760px;
+
+    margin: 30px auto 0;
+    padding: 34px 36px;
+
+    background: linear-gradient(
+        145deg,
+        #27241e 0%,
+        #1b1a18 60%,
+        #151513 100%
+    );
+
+    border: 1px solid #776447;
+    border-radius: 4px;
+
+    box-shadow:
+        0 12px 35px rgba(0,0,0,0.25),
+        inset 0 0 25px rgba(0,0,0,0.2);
+
+}
+
+
+/* ==========================================
+   オンラインショップ
+========================================== */
+
+.shop-sales-card {
+
+    text-align: center;
+
+}
+
+.shop-sales-symbol {
+
+    color: #bca477;
+
+    font-size: 25px;
+
+    margin-bottom: 18px;
+
+}
+
+.shop-sales-title {
+
+    color: #e0c997;
+
+    font-size: 25px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+
+}
+
+.shop-sales-description {
+
+    color: #d0c7b7;
+
+    font-size: 15px;
+
+    line-height: 1.9;
+
+    margin-bottom: 28px;
+
+}
+
+
+/* ==========================================
+   オンラインショップボタン
+========================================== */
+
+.shop-sales-button {
+
+    display: inline-flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 12px;
+
+    min-height: 48px;
+
+    padding: 12px 28px;
+
+    color: #e0c997;
+
+    background: #302a20;
+
+    border: 1px solid #9b8056;
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    letter-spacing: 1px;
+
+    transition:
+        background 0.2s,
+        border-color 0.2s;
+
+}
+
+.shop-sales-button:hover {
+
+    background: #403526;
+
+    border-color: #c5a66f;
+
+}
+
+
+/* ==========================================
+   取扱店舗
+========================================== */
+
+.shop-store-header {
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 22px;
+
+}
+
+.shop-store-label {
+
+    padding: 5px 12px;
+
+    color: #bcae91;
+
+    font-size: 12px;
+
+    border: 1px solid #81704f;
+    border-radius: 3px;
+
+    background: rgba(
+        129,112,79,0.12
+    );
+
+}
+
+.shop-store-region {
+
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+
+    color: #bba77f;
+
+    letter-spacing: 1.5px;
+
+}
+
+.shop-store-title {
+
+    color: #e0c997;
+
+    font-size: 26px;
+
+    letter-spacing: 2px;
+
+    text-align: center;
+
+    margin: 0;
+
+}
+
+
+/* ==========================================
+   装飾区切り
+========================================== */
+
+.shop-store-divider {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 16px;
+
+    margin: 24px 0;
+
+    color: #9e865c;
+
+    font-size: 14px;
+
+}
+
+.shop-store-divider::before,
+.shop-store-divider::after {
+
+    content: "";
+
+    display: block;
+
+    flex: 1;
+    height: 1px;
+
+    background: linear-gradient(
+        90deg,
+        transparent,
+        #756347,
+        transparent
+    );
+
+}
+
+
+/* ==========================================
+   店舗情報
+========================================== */
+
+.shop-store-details {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+
+    text-align: left;
+
+}
+
+.shop-store-row {
+
+    display: grid;
+
+    grid-template-columns:
+        100px minmax(0,1fr);
+
+    gap: 18px;
+
+    align-items: start;
+
+    text-align: left;
+
+}
+
+.shop-store-item-label {
+
+    color: #bca477;
+
+    font-size: 14px;
+
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+}
+
+.shop-store-item-value {
+
+    color: #ded5c4;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    text-align: left;
+
+    min-width: 0;
+
+}
+
+
+/* ==========================================
+   営業案内
+========================================== */
+
+.shop-store-notes {
+
+    margin-top: 26px;
+    padding-top: 22px;
+
+    border-top: 1px solid
+        rgba(129,112,79,0.35);
+
+    text-align: left;
+
+}
+
+.shop-store-notes p {
+
+    margin: 0 0 12px;
+
+    color: #c8beac;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    text-align: left;
+
+}
+
+.shop-store-notes p:last-child {
+
+    margin-bottom: 0;
+
+}
+
+
+/* ==========================================
+   Googleマップボタン
+========================================== */
+
+.shop-store-map-button {
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 10px;
+
+    width: fit-content;
+    max-width: 100%;
+
+    min-height: 46px;
+
+    margin: 26px auto 0;
+
+    padding: 11px 22px;
+
+    color: #e0c997;
+
+    background: #302a20;
+
+    border: 1px solid #9b8056;
+    border-radius: 4px;
+
+    text-decoration: none;
+
+    font-size: 14px;
+
+    letter-spacing: 0.5px;
+
+    transition:
+        background 0.2s,
+        border-color 0.2s;
+
+}
+
+.shop-store-map-button:hover {
+
+    background: #403526;
+
+    border-color: #c5a66f;
+
+}
+
+
+/* ==========================================
+   スマートフォン対応
+========================================== */
+
+@media (max-width: 600px) {
+
+    .shop-sales-card,
+    .shop-store-card {
+
+        margin-top: 22px;
+
+        padding: 24px 18px;
+
+    }
+
+    .shop-sales-title {
+
+        font-size: 22px;
+
+        letter-spacing: 1px;
+
+    }
+
+    .shop-store-title {
+
+        font-size: 23px;
+
+    }
+
+    .shop-sales-description {
+
+        font-size: 14px;
+
+    }
+
+    .shop-store-row {
+
+        grid-template-columns:
+            75px minmax(0,1fr);
+
+        gap: 12px;
+
+    }
+
+    .shop-store-item-label {
+
+        font-size: 13px;
+
+    }
+
+    .shop-store-item-value {
+
+        font-size: 13px;
+
+    }
+
+    .shop-store-notes p {
+
+        font-size: 13px;
+
+    }
+
+    .shop-sales-button,
+    .shop-store-map-button {
+
+        font-size: 13px;
+
+        padding: 11px 16px;
+
+    }
+
+}
+
+
+/* ==========================================
+   SHOP - Drop Gear QRコード
+========================================== */
+
+.shop-store-qr {
+
+    margin-top: 26px;
+    padding-top: 26px;
+
+    border-top: 1px solid rgba(129,112,79,0.35);
+
+    text-align: center;
+
+}
+
+.shop-store-qr h4 {
+
+    margin-bottom: 12px;
+
+    color: #e0c997;
+
+    font-size: 18px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+
+}
+
+.shop-store-qr > p {
+
+    color: #c8beac;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+}
+
+.shop-store-qr-image {
+
+    width: 220px;
+    max-width: 100%;
+
+    margin: 20px auto;
+
+    padding: 10px;
+
+    background: #ffffff;
+
+    border-radius: 4px;
+
+}
+
+.shop-store-qr-image img {
+
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+}
+
+.shop-store-qr .shop-store-qr-guide {
+
+    color: #a89a82;
+
+    font-size: 12px;
+
+}
+
+@media (max-width: 600px) {
+
+    .shop-store-qr-image {
+
+        width: 200px;
+
+    }
+
+    .shop-store-qr h4 {
+
+        font-size: 16px;
+
+    }
+
+}
+/* ==========================================
+   トップページ
+   すべての説明文を左揃え
+========================================== */
+
+/* 各セクションの説明文 */
+#about .paper-panel p,
+#rules .paper-panel p,
+#events .paper-panel p,
+#shop .paper-panel p,
+#play .paper-panel p {
+
+    text-align: left;
+
+}
+
+/* 3種類のカードの説明文 */
+#cards .feature-description {
+
+    text-align: left;
+
+}
+
+/* トップのキャッチコピー */
+#home .hero-description {
+
+    text-align: left;
+
+}
+
+
+/* ==========================================
+   サイト全体
+   説明文の左揃え統一
+========================================== */
+
+/* 基本の文章 */
+main p {
+    text-align: left;
+}
+
+/* トップページの説明パネル */
+.paper-panel p {
+    text-align: left;
+}
+
+/* カード紹介文 */
+.feature-description {
+    text-align: left;
+}
+
+/* イベント情報 */
+.event-detail-row,
+.event-detail-value,
+.event-card-description,
+.event-card-description p {
+    text-align: left;
+}
+
+/* ショップ情報 */
+.shop-store-details,
+.shop-store-row,
+.shop-store-item-value,
+.shop-store-notes,
+.shop-store-notes p {
+    text-align: left;
+}
+
+/* ルールページの説明 */
+.rule-section p,
+.rule-content p {
+    text-align: left;
+}
+
+/* ==========================================
+   中央揃えを維持する部分
+========================================== */
+
+/* ページタイトル・見出し */
+.rule-hero,
+.section-heading,
+.hero-title-area {
+    text-align: center;
+}
+
+/* トップページのキャッチコピー */
+.hero-description {
+    text-align: center;
+}
+
+/* イベント開催予定なしの案内 */
+.event-empty,
+.event-empty p {
+    text-align: center;
+}
+
+/* イベント終了案内 */
+.event-card-footer {
+    text-align: center;
+}
+
+/* オンラインショップ案内 */
+.shop-sales-card,
+.shop-sales-card p {
+    text-align: center;
+}
+
+/* 店舗QRコードの案内 */
+.shop-store-qr,
+.shop-store-qr p {
+    text-align: center;
+}
+
+/* フッター */
+.site-footer,
+.site-footer p {
+    text-align: center;
+}
+/* ==========================================
+   英語タイトル・日本語タイトル
+   中央揃え
+========================================== */
+
+/* ページ上部のタイトル */
+.rule-hero h1,
+.rule-hero > p {
+    text-align: center;
+}
+
+/* セクションの見出し */
+.section-heading h2,
+.section-heading .section-en {
+    text-align: center;
+}
+
+/* カードの英語名・日本語名 */
+.feature-card h3,
+.feature-card .feature-jp {
+    text-align: center;
+}
+
+/* トップページの英語タイトル・日本語名 */
+.hero-main-title,
+.hero-title-jp {
+    text-align: center;
+}
+
+
+/* ==========================================
+   ELEMENTIS SUMMONER
+   FAQ PAGE
+========================================== */
+
+
+/* ==========================================
+   ページ全体
+========================================== */
+
+.faq-container {
+
+    width: 100%;
+    max-width: 1000px;
+
+    margin: 0 auto;
+    padding: 35px 20px 80px;
+
+}
+
+
+/* ==========================================
+   ページ説明
+========================================== */
+
+.faq-introduction {
+
+    max-width: 760px;
+
+    margin: 0 auto 35px;
+
+}
+
+.faq-introduction p {
+
+    font-size: 15px;
+    line-height: 2;
+
+    text-align: left;
+
+}
+
+
+/* ==========================================
+   カテゴリーリンク
+========================================== */
+
+.faq-category-nav {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, minmax(0,1fr));
+
+    gap: 12px;
+
+    max-width: 760px;
+
+    margin: 0 auto 55px;
+
+}
+
+.faq-category-nav a {
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    min-height: 65px;
+
+    padding: 12px;
+
+    background: #241d18;
+
+    border: 1px solid #9b8056;
+    border-radius: 4px;
+
+    color: #e0c997;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-align: center;
+    text-decoration: none;
+
+    transition:
+        background 0.2s,
+        border-color 0.2s;
+
+}
+
+.faq-category-nav a:hover {
+
+    background: #403526;
+
+    border-color: #c5a66f;
+
+}
+
+
+/* ==========================================
+   Q&A セクション
+========================================== */
+
+.faq-section {
+
+    max-width: 760px;
+
+    margin: 0 auto 65px;
+
+    scroll-margin-top: 90px;
+
+}
+
+.faq-section h2 {
+
+    margin-bottom: 8px;
+
+    font-size: 25px;
+
+    text-align: center;
+
+}
+
+.faq-section-en {
+
+    margin-bottom: 28px;
+
+    color: #98794f;
+
+    font-family: Georgia, serif;
+
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    text-align: center !important;
+
+}
+
+
+/* ==========================================
+   質問一覧
+========================================== */
+
+.faq-list {
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 12px;
+
+}
+
+
+/* ==========================================
+   Q&Aカード
+========================================== */
+
+.faq-item {
+
+    background: #faf5ea;
+
+    border: 1px solid #c5ad83;
+    border-radius: 4px;
+
+    overflow: hidden;
+
+}
+
+
+/* ==========================================
+   質問
+========================================== */
+
+.faq-item summary {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 20px;
+
+    cursor: pointer;
+
+    list-style: none;
+
+    color: #38271c;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    text-align: left;
+
+}
+
+.faq-item summary::-webkit-details-marker {
+
+    display: none;
+
+}
+
+.faq-item summary::after {
+
+    content: "+";
+
+    margin-left: auto;
+
+    color: #98794f;
+
+    font-size: 22px;
+
+    line-height: 1;
+
+}
+
+.faq-item[open] summary::after {
+
+    content: "−";
+
+}
+
+
+/* ==========================================
+   Q マーク
+========================================== */
+
+.faq-question-mark {
+
+    flex-shrink: 0;
+
+    color: #245a86;
+
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+    font-weight: bold;
+
+}
+
+
+/* ==========================================
+   質問本文
+========================================== */
+
+.faq-question-text {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+/* ==========================================
+   回答
+========================================== */
+
+.faq-answer {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 12px;
+
+    padding: 18px 20px 22px;
+
+    border-top: 1px solid #ded0b8;
+
+    background: #f1e6d0;
+
+}
+
+
+/* ==========================================
+   A マーク
+========================================== */
+
+.faq-answer-mark {
+
+    flex-shrink: 0;
+
+    color: #a04438;
+
+    font-family: Georgia, serif;
+
+    font-size: 19px;
+    font-weight: bold;
+
+}
+
+
+/* ==========================================
+   回答本文
+========================================== */
+
+.faq-answer p {
+
+    flex: 1;
+
+    min-width: 0;
+
+    margin: 0;
+
+    color: #38271c;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    text-align: left;
+
+}
+
+
+/* ==========================================
+   未掲載カテゴリー
+========================================== */
+
+.faq-empty {
+
+    padding: 35px 20px;
+
+    background: #faf5ea;
+
+    border: 1px solid #c5ad83;
+
+    text-align: center;
+
+}
+
+.faq-empty-symbol {
+
+    margin-bottom: 12px;
+
+    color: #98794f;
+
+    font-size: 20px;
+
+}
+
+.faq-empty p {
+
+    color: #67553e;
+
+    font-size: 14px;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================
+   ルールページへのリンク
+========================================== */
+
+.faq-rule-link {
+
+    max-width: 760px;
+
+    margin: 20px auto 0;
+
+    padding: 35px 20px;
+
+    border-top: 1px solid #c5ad83;
+
+    text-align: center;
+
+}
+
+.faq-rule-link p {
+
+    margin-bottom: 22px;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    text-align: center;
+
+}
+
+
+/* ==========================================
+   スマートフォン対応
+========================================== */
+
+@media (max-width: 600px) {
+
+    .faq-container {
+
+        padding: 25px 15px 60px;
+
+    }
+
+    .faq-category-nav {
+
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+
+        margin-bottom: 45px;
+
+    }
+
+    .faq-category-nav a {
+
+        min-height: 50px;
+
+        font-size: 14px;
+
+    }
+
+    .faq-section {
+
+        margin-bottom: 50px;
+
+    }
+
+    .faq-section h2 {
+
+        font-size: 21px;
+
+    }
+
+    .faq-item summary {
+
+        padding: 15px 13px;
+
+        gap: 9px;
+
+        font-size: 13px;
+
+    }
+
+    .faq-answer {
+
+        padding: 15px 13px;
+
+        gap: 9px;
+
+    }
+
+    .faq-answer p {
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* ==========================================
+   RULE PAGE
+   FAQ LINKS
+========================================== */
+
+
+/* ==========================================
+   上部クイックリンク
+========================================== */
+
+.rule-faq-quicklink {
+
+    max-width: 900px;
+
+    margin: 25px auto 45px;
+    padding: 20px;
+
+    background: #f7f0e2;
+
+    border: 1px solid #c5ad83;
+    border-radius: 4px;
+
+    text-align: center;
+
+}
+
+.rule-faq-quicklink-label {
+
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #98794f;
+
+    font-family: Georgia, serif;
+    font-size: 12px;
+
+    letter-spacing: 2px;
+
+}
+
+.rule-faq-quicklink p {
+
+    margin: 0 0 15px;
+
+    color: #38271c;
+
+    font-size: 14px;
+    line-height: 1.8;
+
+    text-align: center;
+
+}
+
+.rule-faq-quicklink-button {
+
+    display: inline-flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 12px;
+
+    padding: 12px 22px;
+
+    background: #2c241e;
+
+    border: 1px solid #b99a62;
+    border-radius: 3px;
+
+    color: #f0ddb3;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition:
+        background 0.2s,
+        border-color 0.2s;
+
+}
+
+.rule-faq-quicklink-button:hover {
+
+    background: #493928;
+
+    border-color: #dfc18a;
+
+}
+
+
+/* ==========================================
+   下部Q&A案内
+========================================== */
+
+.rule-faq-guide {
+
+    max-width: 1000px;
+
+    margin: 60px auto 80px;
+    padding: 0 20px;
+
+}
+
+.rule-faq-guide-panel {
+
+    max-width: 800px;
+
+    margin: 25px auto 0;
+    padding: 35px 25px;
+
+    background: #f7f0e2;
+
+    border: 1px solid #c5ad83;
+    border-radius: 4px;
+
+    text-align: center;
+
+}
+
+.rule-faq-guide-panel h3 {
+
+    margin: 0 0 15px;
+
+    color: #38271c;
+
+    font-size: 22px;
+
+    text-align: center;
+
+}
+
+.rule-faq-guide-panel p {
+
+    max-width: 650px;
+
+    margin: 0 auto 25px;
+
+    color: #59442d;
+
+    font-size: 14px;
+    line-height: 2;
+
+    text-align: left;
+
+}
+
+.rule-faq-guide-button {
+
+    display: inline-block;
+
+    padding: 13px 30px;
+
+    background: #2c241e;
+
+    border: 1px solid #b99a62;
+    border-radius: 3px;
+
+    color: #f0ddb3;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    text-decoration: none;
+
+    transition: background 0.2s;
+
+}
+
+.rule-faq-guide-button:hover {
+
+    background: #493928;
+
+}
+
+
+/* ==========================================
+   スマートフォン
+========================================== */
+
+@media (max-width: 600px) {
+
+    .rule-faq-quicklink {
+
+        margin: 15px 15px 35px;
+        padding: 18px 12px;
+
+    }
+
+    .rule-faq-quicklink p {
+
+        font-size: 13px;
+
+    }
+
+    .rule-faq-guide {
+
+        margin: 45px auto 60px;
+        padding: 0 15px;
+
+    }
+
+    .rule-faq-guide-panel {
+
+        padding: 25px 18px;
+
+    }
+
+    .rule-faq-guide-panel h3 {
+
+        font-size: 19px;
+
+    }
+
+    .rule-faq-guide-panel p {
+
+        font-size: 13px;
+
+    }
+
+}
