@@ -2505,9 +2505,9 @@ img {
 
     letter-spacing: 1px;
 
-    transition:
-        background 0.2s,
-        border-color 0.2s;
+transition:
+    background 0.2s,
+    border-color 0.2s;
 
 }
 
@@ -3119,12 +3119,13 @@ main p {
    カテゴリーリンク
 ========================================== */
 
+
 .faq-category-nav {
 
     display: grid;
 
     grid-template-columns:
-        repeat(3, minmax(0,1fr));
+        repeat(4, minmax(0, 1fr));
 
     gap: 12px;
 
@@ -3133,6 +3134,7 @@ main p {
     margin: 0 auto 55px;
 
 }
+
 
 .faq-category-nav a {
 
@@ -3472,15 +3474,18 @@ main p {
 
     }
 
-    .faq-category-nav {
 
-        grid-template-columns: 1fr;
+.faq-category-nav {
 
-        gap: 10px;
+    grid-template-columns:
+        repeat(2, minmax(0, 1fr));
 
-        margin-bottom: 45px;
+    gap: 10px;
 
-    }
+    margin-bottom: 45px;
+
+}
+
 
     .faq-category-nav a {
 
