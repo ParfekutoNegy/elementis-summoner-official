@@ -44,10 +44,36 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  fillOptions(element, cardData.map(c => c.element));
-  fillOptions(type, cardData.map(c => c.type));
-  fillOptions(cost, cardData.map(c => c.cost));
+//----------------------------------
+// 属性検索
+// 火 → 風 → 水 → 土
+//----------------------------------
 
+const elementOptions = [
+    { value: "火", label: "Ignis（火）" },
+    { value: "風", label: "Aer（風）" },
+    { value: "水", label: "Aqua（水）" },
+    { value: "土", label: "Terra（土）" }
+];
+
+elementOptions.forEach(item => {
+
+    const option = document.createElement("option");
+
+    option.value = item.value;
+    option.textContent = item.label;
+
+    element.appendChild(option);
+
+});
+
+
+//----------------------------------
+// タイプ・コスト検索
+//----------------------------------
+
+fillOptions(type, cardData.map(c => c.type));
+fillOptions(cost, cardData.map(c => c.cost));
   function render() {
 
     const word = keyword.value.trim().toLowerCase();
